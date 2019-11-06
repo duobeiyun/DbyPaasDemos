@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1196DB852373112A006E6860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB842373112A006E6860 /* AppDelegate.m */; };
+		1196DB8B2373112A006E6860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB8A2373112A006E6860 /* ViewController.m */; };
+		1196DB8E2373112A006E6860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB8C2373112A006E6860 /* Main.storyboard */; };
+		1196DB902373112F006E6860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB8F2373112F006E6860 /* Assets.xcassets */; };
+		1196DB932373112F006E6860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB912373112F006E6860 /* LaunchScreen.storyboard */; };
+		1196DB962373112F006E6860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB952373112F006E6860 /* main.m */; };
+		1196DB9E2373143B006E6860 /* LivePlayEntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB9D2373143B006E6860 /* LivePlayEntranceViewController.m */; };
+		1196DBA12373144A006E6860 /* LivePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DBA02373144A006E6860 /* LivePlayViewController.m */; };
 		860E914B236829CA00324D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E914A236829CA00324D49 /* AppDelegate.swift */; };
 		860E914F236829CA00324D49 /* LivePlayEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E914E236829CA00324D49 /* LivePlayEntranceViewController.swift */; };
 		860E9152236829CB00324D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860E9150236829CB00324D49 /* Main.storyboard */; };
@@ -14,7 +22,6 @@
 		860E9157236829CB00324D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860E9155236829CB00324D49 /* LaunchScreen.storyboard */; };
 		860E916423682CA500324D49 /* DbyVideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E916323682CA500324D49 /* DbyVideoChatViewController.swift */; };
 		860E91662368422B00324D49 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91652368422B00324D49 /* KeyCenter.swift */; };
-		860E91672368445100324D49 /* Pods_DbyPaas_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */; };
 		860E91682368445100324D49 /* Pods_DbyPaas_Demo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		860E91A723696EE700324D49 /* PlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91A623696EE700324D49 /* PlaybackManager.swift */; };
 		860E91AD2369751100324D49 /* DbyPlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91AC2369751100324D49 /* DbyPlaybackViewController.swift */; };
@@ -25,6 +32,8 @@
 		860E91B9236979B800324D49 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91B7236979B800324D49 /* VideoCollectionViewCell.swift */; };
 		860E91BA236979B800324D49 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860E91B8236979B800324D49 /* VideoCollectionViewCell.xib */; };
 		860E91BC23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */; };
+		A99801595D00FD8EDB11F970 /* Pods_DbyPaas_DbyPaas_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2947C07CE2526716D30F603 /* Pods_DbyPaas_DbyPaas_Demo.framework */; };
+		B1A9E4F643450F70887B28DB /* Pods_DbyPaas_DbyPaas_Demo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514659DF9F70FF1CAEC018E0 /* Pods_DbyPaas_DbyPaas_Demo_OC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +52,23 @@
 
 /* Begin PBXFileReference section */
 		06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DbyPaas_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1196DB812373112A006E6860 /* DbyPaas_Demo_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DbyPaas_Demo_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1196DB832373112A006E6860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1196DB842373112A006E6860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1196DB892373112A006E6860 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1196DB8A2373112A006E6860 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1196DB8D2373112A006E6860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1196DB8F2373112F006E6860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1196DB922373112F006E6860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1196DB942373112F006E6860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1196DB952373112F006E6860 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1196DB9C2373143B006E6860 /* LivePlayEntranceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayEntranceViewController.h; sourceTree = "<group>"; };
+		1196DB9D2373143B006E6860 /* LivePlayEntranceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayEntranceViewController.m; sourceTree = "<group>"; };
+		1196DB9F2373144A006E6860 /* LivePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayViewController.h; sourceTree = "<group>"; };
+		1196DBA02373144A006E6860 /* LivePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayViewController.m; sourceTree = "<group>"; };
+		1196DBA223731495006E6860 /* DbyConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DbyConfig.h; sourceTree = "<group>"; };
+		1A438AC77FA2F60D44BC90D0 /* Pods-DbyPaas-DbyPaas_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas-DbyPaas_Demo.debug.xcconfig"; path = "Target Support Files/Pods-DbyPaas-DbyPaas_Demo/Pods-DbyPaas-DbyPaas_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		514659DF9F70FF1CAEC018E0 /* Pods_DbyPaas_DbyPaas_Demo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DbyPaas_DbyPaas_Demo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		860E9147236829CA00324D49 /* DbyPaas_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DbyPaas_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860E914A236829CA00324D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		860E914E236829CA00324D49 /* LivePlayEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayEntranceViewController.swift; sourceTree = "<group>"; };
@@ -64,14 +90,26 @@
 		860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyPlaybackEntranceViewController.swift; sourceTree = "<group>"; };
 		A1E9FC248DBF75025CA0C9F2 /* Pods-DbyPaas_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B617FAEA7A88A96283F3717B /* Pods-DbyPaas_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.debug.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E4916AF39D9F9BD7C2CB3B /* Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas-DbyPaas_Demo_OC/Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig"; sourceTree = "<group>"; };
+		C68989E57885BF7C4A27992B /* Pods-DbyPaas-DbyPaas_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas-DbyPaas_Demo.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas-DbyPaas_Demo/Pods-DbyPaas-DbyPaas_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D38998D999DB3B3A0DF2BB2A /* Pods-DbyPaas-DbyPaas_Demo_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas-DbyPaas_Demo_OC.debug.xcconfig"; path = "Target Support Files/Pods-DbyPaas-DbyPaas_Demo_OC/Pods-DbyPaas-DbyPaas_Demo_OC.debug.xcconfig"; sourceTree = "<group>"; };
+		E2947C07CE2526716D30F603 /* Pods_DbyPaas_DbyPaas_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DbyPaas_DbyPaas_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1196DB7E2373112A006E6860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A9E4F643450F70887B28DB /* Pods_DbyPaas_DbyPaas_Demo_OC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		860E9144236829CA00324D49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860E91672368445100324D49 /* Pods_DbyPaas_Demo.framework in Frameworks */,
+				A99801595D00FD8EDB11F970 /* Pods_DbyPaas_DbyPaas_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,18 +119,50 @@
 		017CF771E2187D466803DF68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */,
+				E2947C07CE2526716D30F603 /* Pods_DbyPaas_DbyPaas_Demo.framework */,
+				514659DF9F70FF1CAEC018E0 /* Pods_DbyPaas_DbyPaas_Demo_OC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1196DB822373112A006E6860 /* DbyPaas_Demo_OC */ = {
+			isa = PBXGroup;
+			children = (
+				1196DB832373112A006E6860 /* AppDelegate.h */,
+				1196DB842373112A006E6860 /* AppDelegate.m */,
+				1196DB892373112A006E6860 /* ViewController.h */,
+				1196DB8A2373112A006E6860 /* ViewController.m */,
+				1196DB8C2373112A006E6860 /* Main.storyboard */,
+				1196DB8F2373112F006E6860 /* Assets.xcassets */,
+				1196DB912373112F006E6860 /* LaunchScreen.storyboard */,
+				1196DB942373112F006E6860 /* Info.plist */,
+				1196DB952373112F006E6860 /* main.m */,
+				1196DB9C2373143B006E6860 /* LivePlayEntranceViewController.h */,
+				1196DB9D2373143B006E6860 /* LivePlayEntranceViewController.m */,
+				1196DB9F2373144A006E6860 /* LivePlayViewController.h */,
+				1196DBA02373144A006E6860 /* LivePlayViewController.m */,
+				1196DBA223731495006E6860 /* DbyConfig.h */,
+			);
+			path = DbyPaas_Demo_OC;
+			sourceTree = "<group>";
+		};
+		1196DB9B237313CC006E6860 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		860E913E236829CA00324D49 = {
 			isa = PBXGroup;
 			children = (
 				860E9149236829CA00324D49 /* DbyPaas_Demo */,
+				1196DB822373112A006E6860 /* DbyPaas_Demo_OC */,
 				860E9148236829CA00324D49 /* Products */,
 				E4729F2C9EF0383280BC568E /* Pods */,
 				017CF771E2187D466803DF68 /* Frameworks */,
+				1196DB9B237313CC006E6860 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				860E9147236829CA00324D49 /* DbyPaas_Demo.app */,
+				1196DB812373112A006E6860 /* DbyPaas_Demo_OC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +229,10 @@
 			children = (
 				B617FAEA7A88A96283F3717B /* Pods-DbyPaas_Demo.debug.xcconfig */,
 				A1E9FC248DBF75025CA0C9F2 /* Pods-DbyPaas_Demo.release.xcconfig */,
+				1A438AC77FA2F60D44BC90D0 /* Pods-DbyPaas-DbyPaas_Demo.debug.xcconfig */,
+				C68989E57885BF7C4A27992B /* Pods-DbyPaas-DbyPaas_Demo.release.xcconfig */,
+				D38998D999DB3B3A0DF2BB2A /* Pods-DbyPaas-DbyPaas_Demo_OC.debug.xcconfig */,
+				C5E4916AF39D9F9BD7C2CB3B /* Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -165,6 +240,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1196DB802373112A006E6860 /* DbyPaas_Demo_OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1196DB992373112F006E6860 /* Build configuration list for PBXNativeTarget "DbyPaas_Demo_OC" */;
+			buildPhases = (
+				4A25BFA8BE2126C553F2C2DF /* [CP] Check Pods Manifest.lock */,
+				1196DB7D2373112A006E6860 /* Sources */,
+				1196DB7E2373112A006E6860 /* Frameworks */,
+				1196DB7F2373112A006E6860 /* Resources */,
+				2E0050C284F71B6150893941 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DbyPaas_Demo_OC;
+			productName = DbyPaas_Demo_OC;
+			productReference = 1196DB812373112A006E6860 /* DbyPaas_Demo_OC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		860E9146236829CA00324D49 /* DbyPaas_Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 860E915B236829CB00324D49 /* Build configuration list for PBXNativeTarget "DbyPaas_Demo" */;
@@ -195,6 +289,9 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = yxibng;
 				TargetAttributes = {
+					1196DB802373112A006E6860 = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					860E9146236829CA00324D49 = {
 						CreatedOnToolsVersion = 11.1;
 						LastSwiftMigration = 1110;
@@ -215,11 +312,22 @@
 			projectRoot = "";
 			targets = (
 				860E9146236829CA00324D49 /* DbyPaas_Demo */,
+				1196DB802373112A006E6860 /* DbyPaas_Demo_OC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1196DB7F2373112A006E6860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1196DB932373112F006E6860 /* LaunchScreen.storyboard in Resources */,
+				1196DB902373112F006E6860 /* Assets.xcassets in Resources */,
+				1196DB8E2373112A006E6860 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		860E9145236829CA00324D49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +343,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E0050C284F71B6150893941 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DbyPaas-DbyPaas_Demo_OC/Pods-DbyPaas-DbyPaas_Demo_OC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A25BFA8BE2126C553F2C2DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DbyPaas-DbyPaas_Demo_OC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA1E3DA02CAA3993F1D5816E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,7 +392,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DbyPaas-DbyPaas_Demo/Pods-DbyPaas-DbyPaas_Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4792C91F2DDE649FEE87258 /* [CP] Check Pods Manifest.lock */ = {
@@ -265,7 +410,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DbyPaas_Demo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DbyPaas-DbyPaas_Demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -275,6 +420,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1196DB7D2373112A006E6860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1196DB9E2373143B006E6860 /* LivePlayEntranceViewController.m in Sources */,
+				1196DB8B2373112A006E6860 /* ViewController.m in Sources */,
+				1196DBA12373144A006E6860 /* LivePlayViewController.m in Sources */,
+				1196DB852373112A006E6860 /* AppDelegate.m in Sources */,
+				1196DB962373112F006E6860 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		860E9143236829CA00324D49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +453,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1196DB8C2373112A006E6860 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1196DB8D2373112A006E6860 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1196DB912373112F006E6860 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1196DB922373112F006E6860 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		860E9150236829CB00324D49 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -315,6 +488,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1196DB972373112F006E6860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D38998D999DB3B3A0DF2BB2A /* Pods-DbyPaas-DbyPaas_Demo_OC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DbyPaas_Demo_OC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duobei.DbyPaas-Demo-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1196DB982373112F006E6860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E4916AF39D9F9BD7C2CB3B /* Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DbyPaas_Demo_OC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duobei.DbyPaas-Demo-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		860E9159236829CB00324D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -431,7 +640,7 @@
 		};
 		860E915C236829CB00324D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B617FAEA7A88A96283F3717B /* Pods-DbyPaas_Demo.debug.xcconfig */;
+			baseConfigurationReference = 1A438AC77FA2F60D44BC90D0 /* Pods-DbyPaas-DbyPaas_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -459,7 +668,7 @@
 		};
 		860E915D236829CB00324D49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E9FC248DBF75025CA0C9F2 /* Pods-DbyPaas_Demo.release.xcconfig */;
+			baseConfigurationReference = C68989E57885BF7C4A27992B /* Pods-DbyPaas-DbyPaas_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -487,6 +696,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1196DB992373112F006E6860 /* Build configuration list for PBXNativeTarget "DbyPaas_Demo_OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1196DB972373112F006E6860 /* Debug */,
+				1196DB982373112F006E6860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		860E9142236829CA00324D49 /* Build configuration list for PBXProject "DbyPaas_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

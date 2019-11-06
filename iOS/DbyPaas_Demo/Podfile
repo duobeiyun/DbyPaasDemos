@@ -2,11 +2,18 @@ source 'https://cdn.cocoapods.org/'
 
 platform :ios, '9.0'
 install! 'cocoapods', disable_input_output_paths: true
-target 'DbyPaas_Demo' do
+abstract_target 'DbyPaas' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'MBProgressHUD'  
-  pod 'SnapKit'
-  pod 'QRCodeReader.swift', '~> 10.1.0'
   pod 'DbyPaas_iOS', '~> 1.0.0-2'
+  
+  target 'DbyPaas_Demo' do
+    pod 'QRCodeReader.swift', '~> 10.1.0'
+    pod 'SnapKit'
+  end 
+
+  target 'DbyPaas_Demo_OC' do 
+    pod 'Masonry'
+  end
 end
