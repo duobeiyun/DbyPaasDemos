@@ -25,8 +25,6 @@
 		860E91B9236979B800324D49 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91B7236979B800324D49 /* VideoCollectionViewCell.swift */; };
 		860E91BA236979B800324D49 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860E91B8236979B800324D49 /* VideoCollectionViewCell.xib */; };
 		860E91BC23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */; };
-		86AA16EA2372770B00742D91 /* DbyPaas_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AA16E92372770B00742D91 /* DbyPaas_iOS.framework */; };
-		86AA16EB2372770B00742D91 /* DbyPaas_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AA16E92372770B00742D91 /* DbyPaas_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +35,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				860E91682368445100324D49 /* Pods_DbyPaas_Demo.framework in Embed Frameworks */,
-				86AA16EB2372770B00742D91 /* DbyPaas_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +62,6 @@
 		860E91B7236979B800324D49 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		860E91B8236979B800324D49 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyPlaybackEntranceViewController.swift; sourceTree = "<group>"; };
-		86AA16E92372770B00742D91 /* DbyPaas_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DbyPaas_iOS.framework; path = DbyPaas_Demo/DbyPaas_iOS.framework; sourceTree = "<group>"; };
 		A1E9FC248DBF75025CA0C9F2 /* Pods-DbyPaas_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B617FAEA7A88A96283F3717B /* Pods-DbyPaas_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.debug.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				860E91672368445100324D49 /* Pods_DbyPaas_Demo.framework in Frameworks */,
-				86AA16EA2372770B00742D91 /* DbyPaas_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +81,6 @@
 		017CF771E2187D466803DF68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86AA16E92372770B00742D91 /* DbyPaas_iOS.framework */,
 				06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */,
 			);
 			name = Frameworks;

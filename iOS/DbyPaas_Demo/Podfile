@@ -8,4 +8,5 @@ target 'DbyPaas_Demo' do
   pod 'MBProgressHUD'  
   pod 'SnapKit'
   pod 'QRCodeReader.swift', '~> 10.1.0'
+  pod 'DbyPaas_iOS', '~> 1.0.0-2'
 end
