@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1196DB852373112A006E6860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB842373112A006E6860 /* AppDelegate.m */; };
-		1196DB8B2373112A006E6860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1196DB8A2373112A006E6860 /* ViewController.m */; };
 		1196DB8E2373112A006E6860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB8C2373112A006E6860 /* Main.storyboard */; };
 		1196DB902373112F006E6860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB8F2373112F006E6860 /* Assets.xcassets */; };
 		1196DB932373112F006E6860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1196DB912373112F006E6860 /* LaunchScreen.storyboard */; };
@@ -32,6 +31,8 @@
 		860E91B9236979B800324D49 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91B7236979B800324D49 /* VideoCollectionViewCell.swift */; };
 		860E91BA236979B800324D49 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860E91B8236979B800324D49 /* VideoCollectionViewCell.xib */; };
 		860E91BC23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */; };
+		86E6FBB52373ABF9009BC657 /* DbyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E6FBB42373ABF9009BC657 /* DbyUserModel.m */; };
+		86E6FBB82373AEF7009BC657 /* LivePlayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E6FBB72373AEF7009BC657 /* LivePlayHelper.m */; };
 		A99801595D00FD8EDB11F970 /* Pods_DbyPaas_DbyPaas_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2947C07CE2526716D30F603 /* Pods_DbyPaas_DbyPaas_Demo.framework */; };
 		B1A9E4F643450F70887B28DB /* Pods_DbyPaas_DbyPaas_Demo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514659DF9F70FF1CAEC018E0 /* Pods_DbyPaas_DbyPaas_Demo_OC.framework */; };
 /* End PBXBuildFile section */
@@ -55,8 +56,6 @@
 		1196DB812373112A006E6860 /* DbyPaas_Demo_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DbyPaas_Demo_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1196DB832373112A006E6860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1196DB842373112A006E6860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1196DB892373112A006E6860 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1196DB8A2373112A006E6860 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1196DB8D2373112A006E6860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1196DB8F2373112F006E6860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1196DB922373112F006E6860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +87,10 @@
 		860E91B7236979B800324D49 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		860E91B8236979B800324D49 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyPlaybackEntranceViewController.swift; sourceTree = "<group>"; };
+		86E6FBB32373ABF9009BC657 /* DbyUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DbyUserModel.h; sourceTree = "<group>"; };
+		86E6FBB42373ABF9009BC657 /* DbyUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DbyUserModel.m; sourceTree = "<group>"; };
+		86E6FBB62373AEF7009BC657 /* LivePlayHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayHelper.h; sourceTree = "<group>"; };
+		86E6FBB72373AEF7009BC657 /* LivePlayHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayHelper.m; sourceTree = "<group>"; };
 		A1E9FC248DBF75025CA0C9F2 /* Pods-DbyPaas_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B617FAEA7A88A96283F3717B /* Pods-DbyPaas_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas_Demo.debug.xcconfig"; path = "Target Support Files/Pods-DbyPaas_Demo/Pods-DbyPaas_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C5E4916AF39D9F9BD7C2CB3B /* Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig"; path = "Target Support Files/Pods-DbyPaas-DbyPaas_Demo_OC/Pods-DbyPaas-DbyPaas_Demo_OC.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,19 +131,15 @@
 		1196DB822373112A006E6860 /* DbyPaas_Demo_OC */ = {
 			isa = PBXGroup;
 			children = (
+				86E6FBB22373ABB6009BC657 /* Models */,
 				1196DB832373112A006E6860 /* AppDelegate.h */,
 				1196DB842373112A006E6860 /* AppDelegate.m */,
-				1196DB892373112A006E6860 /* ViewController.h */,
-				1196DB8A2373112A006E6860 /* ViewController.m */,
 				1196DB8C2373112A006E6860 /* Main.storyboard */,
 				1196DB8F2373112F006E6860 /* Assets.xcassets */,
 				1196DB912373112F006E6860 /* LaunchScreen.storyboard */,
 				1196DB942373112F006E6860 /* Info.plist */,
 				1196DB952373112F006E6860 /* main.m */,
-				1196DB9C2373143B006E6860 /* LivePlayEntranceViewController.h */,
-				1196DB9D2373143B006E6860 /* LivePlayEntranceViewController.m */,
-				1196DB9F2373144A006E6860 /* LivePlayViewController.h */,
-				1196DBA02373144A006E6860 /* LivePlayViewController.m */,
+				86E6FBB12373ABA2009BC657 /* LivePlay */,
 				1196DBA223731495006E6860 /* DbyConfig.h */,
 			);
 			path = DbyPaas_Demo_OC;
@@ -222,6 +221,28 @@
 				860E916323682CA500324D49 /* DbyVideoChatViewController.swift */,
 			);
 			path = LivePlay;
+			sourceTree = "<group>";
+		};
+		86E6FBB12373ABA2009BC657 /* LivePlay */ = {
+			isa = PBXGroup;
+			children = (
+				1196DB9C2373143B006E6860 /* LivePlayEntranceViewController.h */,
+				1196DB9D2373143B006E6860 /* LivePlayEntranceViewController.m */,
+				1196DB9F2373144A006E6860 /* LivePlayViewController.h */,
+				1196DBA02373144A006E6860 /* LivePlayViewController.m */,
+				86E6FBB62373AEF7009BC657 /* LivePlayHelper.h */,
+				86E6FBB72373AEF7009BC657 /* LivePlayHelper.m */,
+			);
+			path = LivePlay;
+			sourceTree = "<group>";
+		};
+		86E6FBB22373ABB6009BC657 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86E6FBB32373ABF9009BC657 /* DbyUserModel.h */,
+				86E6FBB42373ABF9009BC657 /* DbyUserModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E4729F2C9EF0383280BC568E /* Pods */ = {
@@ -424,10 +445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E6FBB82373AEF7009BC657 /* LivePlayHelper.m in Sources */,
 				1196DB9E2373143B006E6860 /* LivePlayEntranceViewController.m in Sources */,
-				1196DB8B2373112A006E6860 /* ViewController.m in Sources */,
 				1196DBA12373144A006E6860 /* LivePlayViewController.m in Sources */,
 				1196DB852373112A006E6860 /* AppDelegate.m in Sources */,
+				86E6FBB52373ABF9009BC657 /* DbyUserModel.m in Sources */,
 				1196DB962373112F006E6860 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VB8MVMJBU4;
 				INFOPLIST_FILE = DbyPaas_Demo_OC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -512,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VB8MVMJBU4;
 				INFOPLIST_FILE = DbyPaas_Demo_OC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

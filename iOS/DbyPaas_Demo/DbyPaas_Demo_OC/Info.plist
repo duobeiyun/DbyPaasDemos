@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>video chat</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>video chat</string>
 </dict>
 </plist>
