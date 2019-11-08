@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_messageroot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <EditText
+            android:id="@+id/inputMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/sendMsg"
+            android:background="@drawable/message_input_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:hint="在此输入聊天内容"
+            android:imeOptions="flagNoExtractUi|flagNoFullscreen"
+            android:inputType="textMultiLine"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#9b9b9b"
+            android:textSize="12dp" />
+
+
+        <TextView
+            android:id="@+id/sendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/message_send_btn_default"
+            android:clickable="true"
+            android:text="发送"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputMsg"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/sendMsg"
+            android:background="@drawable/message_cancle"
+            android:clickable="true"
+            android:text="取消"
+            android:textColor="#4a4a4a"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

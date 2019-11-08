@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    android:id="@+id/rl_container"
+    tools:context=".One2OneActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_local_container"
+        android:layout_width="320dp"
+        android:layout_height="240dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_remote_container"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@+id/rc_view"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp">
+
+            <ImageView
+                android:id="@+id/iv_stop_channel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_close_call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_stop_channel"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:text="退出" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/rl_stop">
+
+            <ImageView
+                android:id="@+id/btn_sendmsg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/chat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_sendmsg"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:text="消息" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_view"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_remote_container"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="24dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_tips"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_avup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="up  :0kbs"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_avdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_avup"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="down:0kbs"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_avfps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_avdown"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="fps:0"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_avdelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_avfps"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="netDelay:0"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_avdelay"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Protocol:0"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_protocol"
+            android:textColor="@color/colorAccent">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_touch_tips"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/ll_control"
+        android:clickable="true"></RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/load"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_go_live"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_user_id"
+        android:layout_marginTop="20dp"
+        android:text="进入频道" />
+
+    <Button
+        android:id="@+id/btn_go_playback"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btn_go_live"
+        android:layout_marginTop="40dp"
+        android:text="进入回放" />
+
+    <EditText
+        android:id="@+id/et_user_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_channel_id"
+        android:layout_marginTop="20dp"
+        android:hint="请输入userId" />
+
+
+    <EditText
+        android:id="@+id/et_channel_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:hint="请输入频道id" />
+
+</RelativeLayout>

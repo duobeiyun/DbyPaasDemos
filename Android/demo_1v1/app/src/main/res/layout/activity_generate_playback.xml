@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_start_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_select_time_tips"
+        android:background="@color/current_time_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="课程开始时间"
+            android:textColor="@color/current_time_text"
+            android:textSize="15sp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/selected_time_text"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_start_date"
+        android:background="@color/current_time_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="课程结束时间"
+            android:textColor="@color/current_time_text"
+            android:textSize="15sp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tv_selected_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/selected_time_text"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_select_time_tips"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/te_channel_id"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:text="选择时间"
+        android:textColor="#B0B0B0"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/te_channel_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="24dp"
+        android:hint="频道号"
+        android:layout_marginRight="34dp"/>
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_end_date"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/btn_selector"
+        android:text="生成回放"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/te_record_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btn_generate"
+        android:layout_marginRight="34dp"/>
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te_record_id"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/btn_selector"
+        android:text="进入回放"
+        android:textColor="#fff" />
+
+    <ProgressBar
+        android:id="@+id/load"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+
+    <ImageButton
+        android:id="@+id/portrait_control"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/playback_stop" />
+
+    <SeekBar
+        android:id="@+id/portrait_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/portrait_control"
+        android:max="500"
+        android:progressDrawable="@drawable/player_setting_bright_progressbar"
+        android:thumb="@drawable/seekbar_slide_bg" />
+
+    <TextView
+        android:id="@+id/portrait_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portrait_seekBar"
+        android:layout_alignLeft="@id/portrait_seekBar"
+        android:text="00:00"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/portrait_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portrait_seekBar"
+        android:layout_alignRight="@id/portrait_seekBar"
+        android:text="00:00:00"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
