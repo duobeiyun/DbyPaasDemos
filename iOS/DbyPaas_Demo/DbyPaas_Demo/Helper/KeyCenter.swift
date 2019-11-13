@@ -9,6 +9,6 @@
 import Foundation
 
 struct KeyCenter {
-    static let AppId: String = "7007abeb86044d9abf53a19103b03ed3"
-    static let AppKey: String = "d58cecf8b96c4f2cb30e4de1cbe983ec"
+    static let AppId: String = ""
+    static let AppKey: String = ""
 }
