@@ -6,7 +6,7 @@ abstract_target 'DbyPaas' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'MBProgressHUD'  
-  pod 'DbyPaas_iOS' , '~> 1.0.0-3'
+  pod 'DbyPaas_iOS', '~> 1.0.0-4'  
   #pod 'DbyPaas_iOS', path: '~/Projects/dby_compare/dby-paas-ios-sdk/DbyPaas_iOS.podspec'
   
   target 'DbyPaas_Demo' do
