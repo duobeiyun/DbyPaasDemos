@@ -1,10 +1,11 @@
 
-1. 下载  [ios sdk]( https://sdk.duobeiyun.net/ios/sdk/1.0.0-3/DbyPaas_iOS.zip)
-2. 解压sdk
-3. 将`Release-universal/DbyPaas_iOS.framework` 放`DbyPaasDemos/iOS/DbyPaas_Demo/DbyPaas_Demo`目录下
-4. 替换 AppId 和 AppKey 
+1. 进入 `DbyPaasDemos/iOS/DbyPaas_Demo`
+2. 执行 `pod install --repo-update`
+3. 替换 AppId 和 AppKey 
     - swift demo 替换`KeyCenter.swift`文件里的`AppId`和`AppKey`。
     - OC demo 替换 `DbyConfig.h` 文件里的`AppId`和`AppKey`。
-5. 在`DbyPaasDemos/iOS/DbyPaas_Demo`执行`pod install`
+4. 选择`swift`或 `objective-c` 的 `target` 
+5. 更改证书，描述文件
+6. 运行
 
 
