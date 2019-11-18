@@ -1,0 +1,153 @@
+
+body {
+  border: 1px solid #ddd;
+}
+
+.app-component-wrap {
+  display: flex;
+  height: 100%;
+
+  .label {
+    margin: 5px 0 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .menus-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 300px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+
+    .camera-settings-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 5px;
+    }
+
+    .mic-settings-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      border-top: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    .join-channel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 5px;
+      border-top: 1px solid #ddd;
+
+      .btn-join-channel {
+        margin-top: 5px;
+      }
+
+      .join-channel-result-tip {
+        margin: 5px 0 0 0;
+      }
+    }
+
+    .debug-info-wrap {
+      margin-top: 5px;
+
+      .dump-protocol-content {
+        margin: 0;
+        padding: 5px;
+        word-break: break-all;
+      }
+    }
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    width: 100px;
+
+    .cameras-wrap {
+      display: flex;
+      flex: 3 0 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      overflow: auto;
+      padding: 5px;
+
+      .camera-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 5px 0 0 5px;
+
+        .radio-choose-stream-type {
+          margin-top: 5px;
+        }
+      }
+      .camera-content-wrap {
+        width: 200px;
+        height: 150px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        canvas {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .chats-wrap {
+      display: flex;
+      flex-direction: row;
+      flex: 2 0 0;
+      width: 100%;
+      border-top: 1px solid #ddd;
+
+      .chat-list-wrap {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 5px;
+        overflow: scroll;
+
+        .ant-comment-inner {
+          padding-top: 0;
+          padding-bottom: 5px;
+        }
+
+        .chat-item {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          margin-bottom: 0;
+        }
+      }
+
+      .chat-input-wrap {
+        display: flex;
+        flex: 0 0 200px;
+        flex-direction: column;
+        padding: 5px;
+        border-left: 1px solid #ddd;
+
+        .input-chat-content {
+          resize: none;
+        }
+
+        .btn-send-chat {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
