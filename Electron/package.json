@@ -13,8 +13,6 @@
     "start": "./node_modules/.bin/electron ./build/dev/main.js"
   },
   "dependencies": {
-    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
-    "@babel/plugin-transform-object-assign": "^7.2.0",
     "antd": "^3.25.2",
     "babel-polyfill": "^6.26.0",
     "dby-paas-electron-sdk": "^1.1.15",
@@ -34,7 +32,9 @@
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/plugin-proposal-decorators": "^7.7.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
     "@babel/plugin-transform-async-to-generator": "^7.7.0",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.0.6",

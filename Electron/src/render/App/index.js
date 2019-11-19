@@ -29,7 +29,7 @@ const dbyElectronSdk = new DBYElectronSdk({
   domainPostfix: '.net',  // .net 或者 .com
 })
 
-dbyElectronSdk.initialize('2f73114f06f4483da779cb1968424625', '47f90cb3bb2345ed9d010be3c299eca4')
+dbyElectronSdk.initialize() // fixme 这里填 appID 和 appKey
 
 dbyElectronSdk.getVideoDevices().then((devices) => {
   store.setCameraDevices(devices)
@@ -52,7 +52,6 @@ dbyElectronSdk.getAudioRecordingDevices().then((devices) => {
   console.log('getAudioRecordingDevices ', devices)
   if (devices.length > 0) {
     store.setCurrentMicDeviceName(devices[0])
-
     // 设置 SDK
     dbyElectronSdk.setAudioRecordingDevice(0)
   }
@@ -62,10 +61,8 @@ dbyElectronSdk.getAudioRecordingDevices().then((devices) => {
 class App extends Component {
 
   state = {
-    channel: '12311',
-    uid: '11111',
-    nickname: '11111',
-    role: 2,
+    channel: '',
+    uid: '',
     chatContent: '',
     messageList: [],
     joinChannelInfo: '', // 加入频道结果提示
@@ -435,14 +432,11 @@ class App extends Component {
               <div className="camera-content-wrap" ref={this.selfVideoRef} />
             </div>
             {
-              _.map(this.state.users, (uid, i) => {
+              _.map(this.state.users, (uid) => {
                 // 只显示最后一个
-                if (i === this.state.users.length - 1) {
-                  return (
-                    <RemoteVideo key={uid} uid={uid} dbyElectronSdk={dbyElectronSdk}/>
-                  )
-                }
-                return null
+                return (
+                  <RemoteVideo key={uid} uid={uid} dbyElectronSdk={dbyElectronSdk}/>
+                )
               })
             }
           </div>
