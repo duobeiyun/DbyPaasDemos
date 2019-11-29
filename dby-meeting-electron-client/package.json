@@ -1,0 +1,164 @@
+{
+  "name": "dby-paas-electron-sdk-demo",
+  "version": "1.1.9",
+  "main": "build/release/main.js",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn run rebuild:deps && yarn run cp:dll",
+    "update:dbysdk": "yarn add dby-paas-electron-sdk",
+    "rebuild:deps": "./node_modules/.bin/electron-builder install-app-deps",
+    "cp:dll:mac": "./node_modules/.bin/shx cp node_modules/dby-node-sdk/*.dylib ./",
+    "cp:dll:win": "./node_modules/.bin/shx cp node_modules/dby-node-sdk/*.dll ./ && ./node_modules/.bin/shx cp node_modules/ffmpeg-node-capture/*.dll ./  && ./node_modules/.bin/shx cp node_modules/agora-electron-sdk/build/Release/*.dll ./ && ./node_modules/.bin/shx cp node_modules/agora-electron-sdk/build/Release/VideoSource.exe ./",
+    "cp:dll": "node scripts/copy_native_libs.js",
+    "build:local:main": "cross-env NODE_ENV=development webpack --config webpack/webpack.config.dev.main.js",
+    "build:local:render": "cross-env NODE_ENV=development BABEL_ENV_TARGETS_BROWSERS=\"Chrome > 56\" webpack --config webpack/webpack.config.dev.render.js",
+    "build:local": "concurrently \"yarn run build:local:render\" \"yarn run build:local:main\"",
+    "build:release:main": "cross-env NODE_ENV=product webpack --config webpack/webpack.config.release.main.js",
+    "build:release:render": "cross-env NODE_ENV=product webpack --config webpack/webpack.config.release.render.js",
+    "build:release": "concurrently \"yarn run build:release:render\" \"yarn run build:release:main\"",
+    "build:mac:dir": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false ./node_modules/.bin/build --mac --x64 --dir",
+    "build:mac:release": "cross-env ./node_modules/.bin/build --mac --x64",
+    "build:win:release": "cross-env ./node_modules/.bin/build --win --ia32",
+    "start": "cross-env NODE_ENV=development ./node_modules/.bin/electron ./build/dev/main.js",
+    "release": "npm version patch && git push --follow-tags",
+    "upload": "node scripts/upload_files_to_cdn.js",
+    "upload:pdbs": "node scripts/upload_pdbs_to_backtrace.js"
+  },
+  "dependencies": {
+    "agora-electron-sdk": "^2.9.0-hotfix.2",
+    "antd": "^3.16.6",
+    "babel-polyfill": "^6.26.0",
+    "backtrace-js": "^0.0.11",
+    "backtrace-node": "^1.0.5",
+    "bluebird": "^3.5.5",
+    "classnames": "^2.2.6",
+    "dby-paas-electron-sdk": "^1.1.23",
+    "electron-is": "^3.0.0",
+    "electron-log": "^3.0.8",
+    "execa": "^2.0.3",
+    "html-webpack-plugin": "^4.0.0-beta.3",
+    "jszip": "^3.2.2",
+    "lodash": "^4.17.11",
+    "md5": "^2.2.1",
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3",
+    "mobx-state-tree": "^3.14.0",
+    "mobx-utils": "^5.4.1",
+    "moment": "^2.24.0",
+    "prop-types": "latest",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "superagent": "^5.1.0",
+    "systeminformation": "^4.15.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.4.4",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "dby-node-file-loader": "^1.0.0",
+    "electron": "1.8.3",
+    "electron-builder": "^20.39.0",
+    "file-loader": "^1.1.11",
+    "fs-extra": "^7.0.1",
+    "less": "^3.7.1",
+    "less-loader": "^4.1.0",
+    "node-gyp": "3.8",
+    "node-loader": "^0.6.0",
+    "shx": "^0.3.2",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  },
+  "build": {
+    "productName": "多贝云会议",
+    "appId": "com.duobeiyun.electronClientPaasSDKDemo",
+    "asar": false,
+    "copyright": "Copyright © 2019 Duobeiyun",
+    "electronVersion": "1.8.3",
+    "files": [
+      "build/release/",
+      "package.json",
+      "!node_modules"
+    ],
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://static-1vn-client.duobeiyun.com/clients"
+      }
+    ],
+    "releaseInfo": {
+      "releaseNotes": ""
+    },
+    "npmRebuild": false,
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.education",
+      "target": [
+        "zip",
+        "dmg"
+      ],
+      "extraFiles": [
+        {
+          "from": "./",
+          "to": "Frameworks/",
+          "filter": "libdby-electron-core*.dylib"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "extraFiles": [
+        {
+          "from": "./",
+          "to": "./",
+          "filter": "*.dll"
+        }
+      ],
+      "timeStampServer": "http://tsa.wotrus.com/rfc3161"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "include": "resources/installer.nsh",
+      "runAfterFinish": true,
+      "allowToChangeInstallationDirectory": false
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  }
+}

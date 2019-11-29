@@ -1,0 +1,52 @@
+
+.device-list-component-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  border-radius: 4px;
+  position: relative;
+  padding: 3px 0;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 0;
+    bottom: -8px;
+    position: absolute;
+    left: 25px;
+  }
+
+  .device-item-wrap {
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    height: 20px;
+    white-space: nowrap;
+    padding-left: 16px;
+    cursor: pointer;
+
+    &.current {
+      background-image: url('../../static/image/icon-choose-white-24-18.png');
+      background-repeat: no-repeat;
+      background-size: 8px 6px;
+      background-position: 4px 7px;
+    }
+
+    .name {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .divider {
+    margin-left: 10px;
+    height: 1px;
+    background-color: rgb(45, 45 ,45);
+  }
+}
