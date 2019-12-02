@@ -1,0 +1,37 @@
+
+.user-video-list-wrap {
+  width: 220px;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+
+  .title {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    background-color: #000;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    filter: blur(0);
+  }
+
+  .video-list-wrap {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 0;
+
+    > * {
+      margin: 10px auto 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}

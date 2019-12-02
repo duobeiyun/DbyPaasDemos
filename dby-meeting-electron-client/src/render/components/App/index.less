@@ -1,0 +1,42 @@
+
+body {
+  font-family: PingFangSC-Regular, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  user-select: none;
+}
+
+.app-component-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  position: relative;
+  font-size: 12px;
+
+  .main-video-wrap, .interactive-area-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-video-wrap {
+    z-index: 1;
+  }
+
+  .interactive-area-wrap {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+
+    .left-panel-wrap, .center-panel-wrap, .right-panel-wrap {
+      display: flex;
+      flex: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .center-panel-wrap {
+      flex: 1;
+    }
+  }
+}
