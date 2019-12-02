@@ -107,7 +107,7 @@ class DbyPlaybackViewController: UIViewController {
     func startEngine() {
         if let rid = self.recordId {
             MBProgressHUD.startLoading(withMessage: "loading", in: self.view)
-            let status = playbackEngine.join(withRecordId: rid)
+            let status = playbackEngine.join(withRecordId: rid, startPlayImmediately: true)
             if status == 0 {
                 MBProgressHUD.stopLoading(in: self.view)
             }
