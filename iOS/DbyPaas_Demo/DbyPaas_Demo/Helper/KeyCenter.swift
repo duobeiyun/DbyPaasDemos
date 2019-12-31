@@ -9,6 +9,10 @@
 import Foundation
 
 struct KeyCenter {
+    
     static let AppId: String = ""
     static let AppKey: String = ""
+    
+    static let AppId_Agora: String = ""
+    
 }

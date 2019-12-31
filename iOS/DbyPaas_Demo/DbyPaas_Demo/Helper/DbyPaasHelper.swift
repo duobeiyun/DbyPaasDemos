@@ -9,6 +9,7 @@
 import Foundation
 import MBProgressHUD
 
+
 public extension MBProgressHUD {
     static func showMessage(msg: String, inView view: UIView?) -> Void {
         guard let loadingView = view else {

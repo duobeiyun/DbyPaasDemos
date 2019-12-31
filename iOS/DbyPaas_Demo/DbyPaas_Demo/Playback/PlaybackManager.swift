@@ -10,12 +10,6 @@ import UIKit
 import DbyPaas_iOS
 import SnapKit
 
-@objc enum DataEventType: Int {
-    case Insert
-    case Update
-    case Delete
-}
-
 class PlaybackItem: NSObject {
     let uid: String
     let canvas: DbyVideoCanvas

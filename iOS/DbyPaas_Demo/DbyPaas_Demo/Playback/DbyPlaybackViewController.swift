@@ -257,10 +257,9 @@ extension DbyPlaybackViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCollectionViewCell", for: indexPath) as! VideoCollectionViewCell
         let item = manager.smallItems[indexPath.item]
         item.view = cell.videoView
-        cell.hasVideo = item.hasVideo
-        cell.isLocal = false
-        cell.uidLabel.text = item.uid
-        cell.audioStateIcon.isHidden = true
+        cell.videoView.hasVideo = item.hasVideo
+        cell.videoView.canBeLarge = true
+        cell.videoView.uid = item.uid
         cell.callback = { [weak self] in
             
             guard let playing = self?.isPlaying else {

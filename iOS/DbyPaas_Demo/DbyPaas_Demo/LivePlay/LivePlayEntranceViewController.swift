@@ -28,18 +28,31 @@ class LivePlayEntranceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onClickEnter(_ sender: Any) {
+    @IBAction func onClickEnter(_ sender: UIButton) {
         
         guard let channelId = channelIdTextField.text, let uid = uidTextField.text else {
             return;
         }
         
+        
+        
+        
         if isValidChannelId(channelId) && isValidUid(uid) {
+            
+            let title = sender.currentTitle!
+            var line: VideoLine
+            if title == "多贝" {
+                line = .DBY
+            } else {
+                line = .AGORA
+            }
+    
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let videoChatVC = storyboard.instantiateViewController(withIdentifier: "DbyVideoChatViewController")
             if let chatVC = videoChatVC as? DbyVideoChatViewController {
                 chatVC.channelId = channelId
                 chatVC.uid = uid
+                chatVC.line = line
                 chatVC.modalPresentationStyle = .fullScreen
                 present(chatVC, animated: true, completion: nil)
             }
