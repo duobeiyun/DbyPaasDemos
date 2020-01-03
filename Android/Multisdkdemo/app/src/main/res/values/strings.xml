@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Multi-sdk-demo</string>
+
+<!--    多贝云SDK appkey appid-->
+    <string name="live_appkey">"</string>
+    <string name="live_appid">"</string>
+
+    <string name="agora_app_id">"</string>
+</resources>
