@@ -21,7 +21,6 @@
 		860E9157236829CB00324D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860E9155236829CB00324D49 /* LaunchScreen.storyboard */; };
 		860E916423682CA500324D49 /* DbyVideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E916323682CA500324D49 /* DbyVideoChatViewController.swift */; };
 		860E91662368422B00324D49 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91652368422B00324D49 /* KeyCenter.swift */; };
-		860E91682368445100324D49 /* Pods_DbyPaas_Demo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		860E91A723696EE700324D49 /* PlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91A623696EE700324D49 /* PlaybackManager.swift */; };
 		860E91AD2369751100324D49 /* DbyPlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91AC2369751100324D49 /* DbyPlaybackViewController.swift */; };
 		860E91AF2369755F00324D49 /* PlayControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91AE2369755F00324D49 /* PlayControlBar.swift */; };
@@ -47,7 +46,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				860E91682368445100324D49 /* Pods_DbyPaas_Demo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,7 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DbyPaas_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1196DB812373112A006E6860 /* DbyPaas_Demo_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DbyPaas_Demo_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1196DB832373112A006E6860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1196DB842373112A006E6860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,9 +151,32 @@
 		1196DB9B237313CC006E6860 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				06457E02B233CA1B6FEFA90F /* Pods_DbyPaas_Demo.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		11C3D4C523C968BF00F80DA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				860E91B52369789900324D49 /* DbyPaasHelper.swift */,
+				8696788923BAE92E002C0EA6 /* VideoCollectionViewCell.swift */,
+				8696788A23BAE92E002C0EA6 /* VideoCollectionViewCell.xib */,
+				8696788523B9EEA9002C0EA6 /* DbyVideoView.swift */,
+				860E91B12369783100324D49 /* ChatTableViewCell.swift */,
+				860E91B02369783100324D49 /* ChatTableViewCell.xib */,
+				860E91AE2369755F00324D49 /* PlayControlBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11C3D4C623C9690600F80DA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8696788723BADD04002C0EA6 /* DbyVideoItem.swift */,
+				8696788F23BB1A39002C0EA6 /* DbyVideoChatManager.swift */,
+				860E91A623696EE700324D49 /* PlaybackManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		860E913E236829CA00324D49 = {
@@ -183,14 +203,11 @@
 		860E9149236829CA00324D49 /* DbyPaas_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				86AA16EC2372774500742D91 /* LivePlay */,
-				860E91A523696ED400324D49 /* Playback */,
-				860E91B42369786600324D49 /* Helper */,
+				11C3D4C623C9690600F80DA1 /* Models */,
+				11C3D4C523C968BF00F80DA1 /* Views */,
+				86AA16EC2372774500742D91 /* Controllers */,
 				860E914A236829CA00324D49 /* AppDelegate.swift */,
-				8696788723BADD04002C0EA6 /* DbyVideoItem.swift */,
-				8696788523B9EEA9002C0EA6 /* DbyVideoView.swift */,
-				8696788923BAE92E002C0EA6 /* VideoCollectionViewCell.swift */,
-				8696788A23BAE92E002C0EA6 /* VideoCollectionViewCell.xib */,
+				860E91652368422B00324D49 /* KeyCenter.swift */,
 				860E9150236829CB00324D49 /* Main.storyboard */,
 				860E9153236829CB00324D49 /* Assets.xcassets */,
 				860E9155236829CB00324D49 /* LaunchScreen.storyboard */,
@@ -200,36 +217,15 @@
 			path = DbyPaas_Demo;
 			sourceTree = "<group>";
 		};
-		860E91A523696ED400324D49 /* Playback */ = {
+		86AA16EC2372774500742D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				860E91AC2369751100324D49 /* DbyPlaybackViewController.swift */,
 				860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */,
-				860E91B12369783100324D49 /* ChatTableViewCell.swift */,
-				860E91B02369783100324D49 /* ChatTableViewCell.xib */,
-				860E91AE2369755F00324D49 /* PlayControlBar.swift */,
-				860E91A623696EE700324D49 /* PlaybackManager.swift */,
-			);
-			path = Playback;
-			sourceTree = "<group>";
-		};
-		860E91B42369786600324D49 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				860E91652368422B00324D49 /* KeyCenter.swift */,
-				860E91B52369789900324D49 /* DbyPaasHelper.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		86AA16EC2372774500742D91 /* LivePlay */ = {
-			isa = PBXGroup;
-			children = (
 				860E914E236829CA00324D49 /* LivePlayEntranceViewController.swift */,
 				860E916323682CA500324D49 /* DbyVideoChatViewController.swift */,
-				8696788F23BB1A39002C0EA6 /* DbyVideoChatManager.swift */,
 			);
-			path = LivePlay;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		86E6FBB12373ABA2009BC657 /* LivePlay */ = {
