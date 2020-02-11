@@ -179,7 +179,7 @@ extension DbyVideoChatViewController: DbyEngineDelegate {
     
     
     //MARK: local
-    func dbyEngine(_ engine: DbyEngine, didJoinChannel channel: String, withUid uid: String) {
+    func dbyEngine(_ engine: DbyEngine, didJoinChannel channel: String, withUid uid: String, nickname: String) {
         self.videoManager.localJoinWith(uid: UInt(uid)!)
     }
     
@@ -227,7 +227,7 @@ extension DbyVideoChatViewController: DbyEngineDelegate {
     
     
     //MARK: remote
-    func dbyEngine(_ engine: DbyEngine, didJoinedOfUid uid: String) {
+    func dbyEngine(_ engine: DbyEngine, didJoinedOfUid uid: String, nickname: String) {
         self.videoManager.remoteJoinWith(uid: UInt(uid)!)
         
     }
@@ -474,7 +474,7 @@ extension DbyVideoChatViewController {
         dbyEngine.enableLocalAudio(true)
         dbyEngine.enableLocalVideo(true)
         
-        let code = dbyEngine.joinChannel(byId: self.channelId, userId: self.uid, completeHandler: nil)
+        let code = dbyEngine.joinChannel(byId: self.channelId, userId: self.uid, nickname: "", completeHandler: nil)
         if code == 0 {
             //进入的时候就设置本地预览
             let canvas = DbyVideoCanvas.init(view: self.bigStreamView.videoContentView, uid: uid)

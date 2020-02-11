@@ -61,7 +61,7 @@
 #pragma mark -
 - (void)startEngine
 {
-    int status = [self.dbyEngine joinChannelById:self.channelId userId:self.uid completeHandler:nil];
+    int status = [self.dbyEngine joinChannelById:self.channelId userId:self.uid nickname:nil completeHandler:nil];
     if (status == 0) {
         DbyVideoEncoderConfiguration *config = [[DbyVideoEncoderConfiguration alloc] initWithSize:DbyVideoDimension640x360 frameRate:DbyVideoFrameRateFps15 orientationMode:DbyVideoOutputOrientationModeAdaptative];
         [self.dbyEngine setVideoEncoderConfiguration:config];
@@ -135,7 +135,7 @@
 }
 
 #pragma mark -
-- (void)dbyEngine:(DbyEngine *)engine didJoinChannel:(NSString *)channel withUid:(NSString *)uid
+- (void)dbyEngine:(DbyEngine *)engine didJoinChannel:(NSString *)channel withUid:(NSString *)uid nickname:(NSString * _Nonnull)nickname
 {
     [self.livePlayHelper joinWithUid:uid isLocal:YES];
 }
@@ -162,7 +162,7 @@
     [self.dbyEngine leaveChannel:nil];
 }
 
-- (void)dbyEngine:(DbyEngine *)engine didJoinedOfUid:(NSString *)uid
+- (void)dbyEngine:(DbyEngine *)engine didJoinedOfUid:(NSString *)uid nickname:(NSString * _Nonnull)nickname
 {
     [self.livePlayHelper joinWithUid:uid isLocal:NO];
 }
