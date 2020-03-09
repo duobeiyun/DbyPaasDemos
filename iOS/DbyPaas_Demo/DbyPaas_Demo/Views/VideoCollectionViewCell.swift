@@ -9,15 +9,15 @@
 import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var videoView: DbyVideoView!
-    
-    var callback:(() ->())?
+
+    var callback:(() ->Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         self.videoView.switchToLargeButton.addTarget(self, action: #selector(onClickSwitchMode(_:)), for: .touchUpInside)
     }
-    
+
     @objc func onClickSwitchMode(_ sender: UIButton) {
         self.callback?()
     }

@@ -8,7 +8,7 @@ abstract_target 'DbyPaas' do
   pod 'MBProgressHUD'  
   pod 'DbyPaas_iOS', '~> 1.0.0-7'
   pod 'AgoraRtcEngine_iOS'
-  #pod 'DbyPaas_iOS', path: '~/Projects/dby_compare/dby-paas-ios-sdk/DbyPaas_iOS.podspec'
+  #pod 'DbyPaas_iOS', path: '~/Projects/compare_agora/dby-paas-ios-sdk/DbyPaas_iOS.podspec'
   
   target 'DbyPaas_Demo' do
     pod 'QRCodeReader.swift', '~> 10.1.0'

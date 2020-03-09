@@ -8,10 +8,9 @@
 
 import UIKit
 
-
 @objc protocol PlayControlBarDelegate {
     @objc optional
-    
+
     func onclickPlay(button: UIButton)
     func onClickRate(button: UIButton)
     /// 进度条变更的回调
@@ -19,27 +18,26 @@ import UIKit
     /// - Parameter value: 秒
     func onSlideChangeTo(value: Double)
     func onSlideTouchBegin()
-    func onSlideTouchEnd();
+    func onSlideTouchEnd()
 }
-
 
 class PlayControlBar: UIView {
 
     let playControlHeight = 44.0
-    
+
     var isPlaying: Bool = false {
         didSet {
            self.playButton.isSelected = isPlaying
         }
     }
-    
+
     var rate: Float = 1.0 {
         didSet {
             self.rateButton.setTitle("\(rate)x", for: .normal)
         }
     }
-    
-    let numberFormatter : NumberFormatter = {
+
+    let numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
         //设置number显示样式
         numberFormatter.numberStyle = .none //四舍五入的整数
@@ -62,10 +60,10 @@ class PlayControlBar: UIView {
             self.slide.maximumValue = Float(videoLength)
         }
     }
-    
+
     func secondsToTime(seconds: Int) -> String? {
         let tuple = (hour: seconds / 3600, minute: (seconds % 3600) / 60, seconds: (seconds % 3600) % 60)
-        
+
         if let hour = numberFormatter.string(from: NSNumber.init(value: tuple.hour)),
         let minute = numberFormatter.string(from: NSNumber.init(value: tuple.minute)),
             let seconds = numberFormatter.string(from: NSNumber.init(value: tuple.seconds)) {
@@ -73,20 +71,19 @@ class PlayControlBar: UIView {
         }
         return nil
     }
-    
-    
+
     @objc func clickPlay(sender: UIButton) {
         if let onClickPlay = self.delegate?.onclickPlay {
             onClickPlay(sender)
         }
     }
-    
+
     @objc func changeProgressWith(slide: UISlider) {
         self.delegate?.onSlideChangeTo(value: Double(slide.value))
     }
-    
+
     @objc func touchSlider(slide: UISlider, forEvent event: UIEvent) {
-     
+
         if let touchEvent = event.allTouches?.first {
             switch touchEvent.phase {
             case .began:
@@ -102,16 +99,15 @@ class PlayControlBar: UIView {
                 break
             }
         }
-  
+
     }
-    
-    
+
     @objc func changeRate(sender: UIButton) {
         self.delegate?.onClickRate(button: sender)
     }
-    
+
     weak var delegate: PlayControlBarDelegate?
-    
+
     lazy var slide: UISlider = {
         let slide = UISlider.init()
         slide.addTarget(self, action: #selector(changeProgressWith(slide:)), for: .valueChanged)
@@ -127,78 +123,74 @@ class PlayControlBar: UIView {
         button.addTarget(self, action: #selector(clickPlay(sender:)), for: .touchUpInside)
         return button
     }()
-    
+
     lazy var rateButton: UIButton = {
         let button = UIButton.init()
         button.setTitle("1.0x", for: .normal)
         button.addTarget(self, action: #selector(changeRate(sender:)), for: .touchUpInside)
         return button
     }()
-    
+
     let startLabel: UILabel = {
        let label = UILabel.init()
        return label
     }()
-    
+
     let endLabel: UILabel = {
         let label = UILabel.init()
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self .setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setup()
     }
-    
-    
+
     func setup() {
-        
+
         let blurView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: .dark))
         addSubview(blurView)
         blurView.snp.makeConstraints { (make) in
             make.edges.equalTo(self)
         }
-        
+
         addSubview(slide)
         addSubview(playButton)
         addSubview(startLabel)
         addSubview(endLabel)
         addSubview(rateButton)
-        
+
         playButton.snp.makeConstraints { (make) in
             make.left.top.bottom.equalTo(self)
             make.size.equalTo(CGSize.init(width: playControlHeight, height: playControlHeight))
         }
-        
+
         rateButton.snp.makeConstraints { (make) in
             make.right.top.equalTo(self)
             make.size.equalTo(CGSize.init(width: playControlHeight, height: playControlHeight))
         }
-        
+
         slide.snp.makeConstraints { (make) in
             make.left.equalTo(playButton.snp_right)
             make.right.equalTo(rateButton.snp_left)
             make.top.equalTo(self)
             make.height.equalTo(playControlHeight/2)
         }
-        
 
-        
         startLabel.snp.makeConstraints { (make) in
             make.left.equalTo(slide)
             make.bottom.equalTo(self)
         }
-        
+
         endLabel.snp.makeConstraints { (make) in
             make.right.equalTo(slide)
             make.bottom.equalTo(self)
         }
     }
-    
-    
+
 }

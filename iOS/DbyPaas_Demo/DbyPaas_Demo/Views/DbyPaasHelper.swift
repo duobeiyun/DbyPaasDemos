@@ -9,9 +9,8 @@
 import Foundation
 import MBProgressHUD
 
-
 public extension MBProgressHUD {
-    static func showMessage(msg: String, inView view: UIView?) -> Void {
+    static func showMessage(msg: String, inView view: UIView?) {
         guard let loadingView = view else {
             return
         }
@@ -23,13 +22,13 @@ public extension MBProgressHUD {
             hud.hide(animated: false, afterDelay: 1.0)
         }
     }
-    
+
     static func startLoading(withMessage msg: String, in view: UIView?) {
-        
+
         guard let loadingView = view  else {
             return
         }
-        
+
         runOnMainQueueWithoutDeadlocking {
             let hud = MBProgressHUD.showAdded(to: loadingView, animated: true)
             hud.detailsLabel.text = msg
@@ -37,7 +36,7 @@ public extension MBProgressHUD {
             hud.removeFromSuperViewOnHide = true
         }
     }
-    
+
     static func stopLoading(in view: UIView?) {
         guard let loadingView = view else {
             return

@@ -13,38 +13,40 @@ import DbyPaas_iOS
 class VideoCanvas {
     let agoraCanvas: AgoraRtcVideoCanvas = AgoraRtcVideoCanvas.init()
     let dbyCanvas: DbyVideoCanvas = DbyVideoCanvas.init()
-    
-    var uid: UInt = 0 {
+
+    var uid: String = "" {
         didSet {
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.backgroundColor = .clear
-            
             //agora
-            agoraCanvas.uid = uid
+            agoraCanvas.uid = UInt(self.uid) ?? 0
             agoraCanvas.view = view
             agoraCanvas.renderMode = renderMode
-            
+
             //dby
             dbyCanvas.uid = String(uid)
             dbyCanvas.view = view
             dbyCanvas.renderMode = .aspectFit
-            
+
         }
     }
-    let view:UIView = UIView.init()
+    let view: UIView = UIView.init()
     var renderMode: AgoraVideoRenderMode = .fit
 }
 
 class DbyVideoItem: NSObject {
-    
-    var uid:UInt = 0 {
+
+    var uid: String = "" {
         didSet {
             canvas.uid = uid
         }
     }
-    
+
+    var nickname: String = ""
     var hasVideo: Bool = false
     var hasAudio: Bool = false
+
+    var muteAudio: Bool = false
+    var muteVideo: Bool = false
+
     var isLocal: Bool = false
     var isLarge: Bool = false
     var volume: String = ""
@@ -64,5 +66,5 @@ class DbyVideoItem: NSObject {
             }
         }
     }
-    
+
 }

@@ -28,6 +28,7 @@
 		860E91B32369783100324D49 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91B12369783100324D49 /* ChatTableViewCell.swift */; };
 		860E91B62369789900324D49 /* DbyPaasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91B52369789900324D49 /* DbyPaasHelper.swift */; };
 		860E91BC23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */; };
+		862D2DD32415EAC7004E3AF9 /* JoinChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D2DD22415EAC7004E3AF9 /* JoinChannelInfo.swift */; };
 		8696788623B9EEA9002C0EA6 /* DbyVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696788523B9EEA9002C0EA6 /* DbyVideoView.swift */; };
 		8696788823BADD04002C0EA6 /* DbyVideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696788723BADD04002C0EA6 /* DbyVideoItem.swift */; };
 		8696788B23BAE92E002C0EA6 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696788923BAE92E002C0EA6 /* VideoCollectionViewCell.swift */; };
@@ -85,6 +86,7 @@
 		860E91B12369783100324D49 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		860E91B52369789900324D49 /* DbyPaasHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyPaasHelper.swift; sourceTree = "<group>"; };
 		860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyPlaybackEntranceViewController.swift; sourceTree = "<group>"; };
+		862D2DD22415EAC7004E3AF9 /* JoinChannelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinChannelInfo.swift; sourceTree = "<group>"; };
 		8696788523B9EEA9002C0EA6 /* DbyVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbyVideoView.swift; sourceTree = "<group>"; };
 		8696788723BADD04002C0EA6 /* DbyVideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbyVideoItem.swift; sourceTree = "<group>"; };
 		8696788923BAE92E002C0EA6 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				8696788723BADD04002C0EA6 /* DbyVideoItem.swift */,
 				8696788F23BB1A39002C0EA6 /* DbyVideoChatManager.swift */,
 				860E91A623696EE700324D49 /* PlaybackManager.swift */,
+				862D2DD22415EAC7004E3AF9 /* JoinChannelInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,10 +223,10 @@
 		86AA16EC2372774500742D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				860E91AC2369751100324D49 /* DbyPlaybackViewController.swift */,
 				860E91BB23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift */,
-				860E914E236829CA00324D49 /* LivePlayEntranceViewController.swift */,
+				860E91AC2369751100324D49 /* DbyPlaybackViewController.swift */,
 				860E916323682CA500324D49 /* DbyVideoChatViewController.swift */,
+				860E914E236829CA00324D49 /* LivePlayEntranceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				860E91AD2369751100324D49 /* DbyPlaybackViewController.swift in Sources */,
 				8696788623B9EEA9002C0EA6 /* DbyVideoView.swift in Sources */,
 				8696789023BB1A39002C0EA6 /* DbyVideoChatManager.swift in Sources */,
+				862D2DD32415EAC7004E3AF9 /* JoinChannelInfo.swift in Sources */,
 				860E914F236829CA00324D49 /* LivePlayEntranceViewController.swift in Sources */,
 				860E91BC23697A3D00324D49 /* DbyPlaybackEntranceViewController.swift in Sources */,
 				860E91B62369789900324D49 /* DbyPaasHelper.swift in Sources */,

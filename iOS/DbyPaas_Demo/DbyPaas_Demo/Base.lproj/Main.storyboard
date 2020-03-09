@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w8b-gx-MNW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w8b-gx-MNW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,8 +73,43 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oig-iA-kqy">
+                                <rect key="frame" x="134.5" y="305" width="145" height="70"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-PD-0ay">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="32"/>
+                                        <segments>
+                                            <segment title="直播模式"/>
+                                            <segment title="通信模式"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="onChangeMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="VmN-j8-Uyg"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S60-Fq-xC1">
+                                        <rect key="frame" x="0.0" y="39" width="145" height="32"/>
+                                        <segments>
+                                            <segment title="我是主播"/>
+                                            <segment title="我是听众"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="onChangeRole:" destination="BYZ-38-t0r" eventType="valueChanged" id="Eho-3D-lxa"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-py-15z">
+                                        <rect key="frame" x="-26" y="70" width="197" height="1"/>
+                                        <segments>
+                                            <segment title="开启大小流"/>
+                                            <segment title="不开启大小流"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="onChangeStreamType:" destination="BYZ-38-t0r" eventType="valueChanged" id="SSY-3d-5TJ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="AYK-Be-f07">
-                                <rect key="frame" x="114.5" y="329" width="185" height="30"/>
+                                <rect key="frame" x="114.5" y="417" width="185" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFV-t1-tyF">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
@@ -98,14 +133,19 @@
                             <constraint firstItem="AYK-Be-f07" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6h1-0M-rJA"/>
                             <constraint firstItem="FjS-34-A9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ABE-Lm-j9g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FjS-34-A9f" secondAttribute="trailing" constant="50" id="BVo-rx-JT5"/>
-                            <constraint firstItem="AYK-Be-f07" firstAttribute="top" secondItem="FjS-34-A9f" secondAttribute="bottom" constant="44" id="Crm-ON-lKQ"/>
+                            <constraint firstItem="oig-iA-kqy" firstAttribute="centerX" secondItem="ozs-yc-qRx" secondAttribute="centerX" id="PFi-K4-bVT"/>
                             <constraint firstItem="FjS-34-A9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="T0R-By-Zxf"/>
+                            <constraint firstItem="AYK-Be-f07" firstAttribute="top" secondItem="oig-iA-kqy" secondAttribute="bottom" constant="42" id="TyT-c5-xIt"/>
+                            <constraint firstItem="oig-iA-kqy" firstAttribute="top" secondItem="ozs-yc-qRx" secondAttribute="bottom" constant="20" id="XPm-48-ktk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="live play" id="bhC-AT-uRb"/>
                     <connections>
                         <outlet property="channelIdTextField" destination="eRV-xt-MRl" id="fsH-6T-tsL"/>
+                        <outlet property="modeSeg" destination="ETe-PD-0ay" id="aP0-NX-30Q"/>
+                        <outlet property="roleSeg" destination="S60-Fq-xC1" id="ChP-v3-0xk"/>
+                        <outlet property="streamSeg" destination="LpX-py-15z" id="934-In-fdJ"/>
                         <outlet property="uidTextField" destination="ozs-yc-qRx" id="c9w-CJ-5cf"/>
                     </connections>
                 </viewController>

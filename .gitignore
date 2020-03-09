@@ -11,3 +11,4 @@ build
 
 *.dylib
 *.dll
+xcschememanagement.plist
