@@ -32,10 +32,7 @@ import com.duobeiyun.multi_sdk_demo.widget.TipsDialog;
 import com.duobeiyun.paassdk.bean.DBVolumeInfo;
 import com.duobeiyun.paassdk.utils.StatusCode;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class MultiVideoActivity extends AppCompatActivity {
     private static final int PERMISSION_REQ_ID = 123;
@@ -57,7 +54,6 @@ public class MultiVideoActivity extends AppCompatActivity {
         smallViewContainer1 = findViewById(R.id.ll_remote_small_container);
         smallViewContainer2 = findViewById(R.id.ll_remote_small_container_bottom);
         load = findViewById(R.id.load);
-
     }
 
     @Override

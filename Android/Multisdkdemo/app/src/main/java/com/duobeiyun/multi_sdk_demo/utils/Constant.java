@@ -9,4 +9,7 @@ public class Constant {
     public static final String CHANNEL_END_TIME = "channel_end_time";
     public static final String CHANNEL_RECORD_ID= "channel_record_id";
     public static final String DBBUG_SHOW_PLAYBACK= "dbbug_show_playback";
+    public static final String IS_LIVE= "is_live";
+    public static final String IS_ANCHOR= "is_anchor";
+
 }

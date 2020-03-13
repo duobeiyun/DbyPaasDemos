@@ -4,7 +4,6 @@ import com.duobeiyun.multi_sdk_demo.live.LiveCallback;
 import com.duobeiyun.multi_sdk_demo.live.LiveCode;
 import com.duobeiyun.paassdk.bean.AVideoState;
 import com.duobeiyun.paassdk.bean.DBVolumeInfo;
-import com.duobeiyun.paassdk.bean.stats.RemoteVideoStats;
 import com.duobeiyun.paassdk.live.DbyEventHandler;
 import com.duobeiyun.paassdk.utils.StatusCode;
 
@@ -18,7 +17,7 @@ public class DuobeiEventHandler extends DbyEventHandler {
     }
 
     @Override
-    public void onUserJoined(String uid) {
+    public void onUserJoined(String uid,String userName) {
         if (callback != null) {
             callback.onUserJoined(uid);
         }
@@ -32,14 +31,14 @@ public class DuobeiEventHandler extends DbyEventHandler {
     }
 
     @Override
-    public void onJoinChannelSuccess(String channel, String userId) {
+    public void onJoinChannelSuccess(String channel, String userId,String userName) {
         if (callback != null) {
             callback.onJoinChannelSuccess(channel, userId);
         }
     }
 
     @Override
-    public void onRejoinChannelSuccess(String channel, String userId) {
+    public void onRejoinChannelSuccess(String channel, String userId,String userName) {
         if (callback != null) {
             callback.onRejoinChannelSuccess(channel, userId);
         }
@@ -160,6 +159,11 @@ public class DuobeiEventHandler extends DbyEventHandler {
         }
     }
 
+    @Override
+    public void onClientRoleChanged(int oldRole, int newRole) {
+        super.onClientRoleChanged(oldRole, newRole);
+        //用户角色发生改变
+    }
 
     @Override
     public void onLastmileQuality(int quality) {

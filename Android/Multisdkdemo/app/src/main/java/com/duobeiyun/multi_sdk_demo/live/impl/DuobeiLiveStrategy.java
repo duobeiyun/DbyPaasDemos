@@ -14,7 +14,6 @@ import com.duobeiyun.paassdk.live.DbyEngine;
 import com.duobeiyun.paassdk.live.DbyEventHandler;
 import com.duobeiyun.paassdk.opengles.GLFrameSurfaceView;
 import com.duobeiyun.paassdk.opengles.VideoDraw;
-import com.duobeiyun.paassdk.utils.AspectRatio;
 import com.duobeiyun.paassdk.video.CameraConfig;
 
 public class DuobeiLiveStrategy implements Livestrategy {
@@ -165,9 +164,18 @@ public class DuobeiLiveStrategy implements Livestrategy {
     private void initsdk() {
         mDbyEngine = DbyEngine.createInstance(mContext, mContext.getString(R.string.live_appkey),
                 mContext.getString(R.string.live_appid), new DuobeiEventHandler(liveCallback));
-        boolean isDuaStream = SharePreUtils.getInstance(mContext).getValue(Constant.DUA_STREAM, true);
-        Log.e("DuobeiLiveStrategy", "initsdk: " + isDuaStream);
-        mDbyEngine.enableDualStreams(isDuaStream);//需要在joinchannel前调用
+        boolean isLive = SharePreUtils.getInstance(mContext).getValue(Constant.IS_LIVE, false);
+        boolean isAnchor = SharePreUtils.getInstance(mContext).getValue(Constant.IS_ANCHOR, false);
+        if (isLive) {
+            //直播模式
+            mDbyEngine.setChannelProfile(1);
+            if (isAnchor) {
+                mDbyEngine.setClientRole(1);
+            }
+        } else {
+            //通信模式
+        mDbyEngine.enableDualStreams(true);//需要在joinchannel前调用
+        }
     }
 
     private void enableLocalCamera() {
@@ -179,10 +187,9 @@ public class DuobeiLiveStrategy implements Livestrategy {
 
 
     private void joinChannel() {
-        Log.e("ygstestttt", "joinChannel_qian");
         String channelId = SharePreUtils.getInstance(mContext).getValue(Constant.CHANNELID, "123");
         userId = SharePreUtils.getInstance(mContext).getValue(Constant.USERID, "0");
-        mDbyEngine.joinChannel(channelId, userId);
+        mDbyEngine.joinChannel(channelId, userId,"");
         mDbyEngine.enableAudioVolumeIndication(-1, true);
     }
 }

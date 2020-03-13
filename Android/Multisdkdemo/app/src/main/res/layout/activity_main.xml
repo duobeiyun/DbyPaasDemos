@@ -14,6 +14,23 @@
         android:layout_marginTop="20dp"
         android:text="进入频道" />
 
+    <CheckBox
+        android:id="@+id/cb_live_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_group"
+        android:layout_centerHorizontal="true"
+        android:text="直播模式" />
+
+
+    <CheckBox
+        android:id="@+id/cb_live_anchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb_live_Profile"
+        android:layout_centerHorizontal="true"
+        android:text="设为主播" />
+
     <EditText
         android:id="@+id/et_user_id"
         android:layout_width="match_parent"
@@ -22,7 +39,6 @@
         android:layout_marginTop="20dp"
         android:hint="请输入userId"
         android:inputType="number" />
-
 
     <EditText
         android:id="@+id/et_channel_id"

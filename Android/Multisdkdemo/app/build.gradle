@@ -30,6 +30,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.duobeiyun.paassdk:paassdk:1.0.4.16'//多贝云
+    implementation 'com.duobeiyun.paassdk:paassdk:1.0.5.0'//多贝云
     implementation 'io.agora.rtc:full-sdk:2.9.2'//声网
 }
