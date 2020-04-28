@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="sdkwrapper">
+      <UniqueIdentifier>{289c726a-15be-4ad0-8af8-65e6b57fb542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{24ea7c16-2288-41e2-b185-57f8846aebdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="easydump">
+      <UniqueIdentifier>{c5283742-f8c1-4c49-a26b-5d660f96d5bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessState">
+      <UniqueIdentifier>{5d829d08-58a3-42d8-b363-bb358677b21a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChatWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLYuvWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NoFocusDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QNChatMessage\QNChatMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolbarWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserStateWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YUV420P_Render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DbyObject.cpp">
+      <Filter>sdkwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivateEventHandler.cpp">
+      <Filter>sdkwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>sdkwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DbSettings.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="easydump\easydump.cpp">
+      <Filter>easydump</Filter>
+    </ClCompile>
+    <ClCompile Include="DbMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraImageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessState.cpp">
+      <Filter>ProcessState</Filter>
+    </ClCompile>
+    <ClCompile Include="NetSpeed.cpp">
+      <Filter>ProcessState</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ChatWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GLYuvWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LoginDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="NoFocusDelegate.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="QEventDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="QNChatMessage\QNChatMessage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ToolbarWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UserListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UserStateWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VideoManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VideoWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="YUV420P_Render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="ObjectManager.h">
+      <Filter>sdkwrapper</Filter>
+    </QtMoc>
+    <QtMoc Include="DbSettings.h">
+      <Filter>common</Filter>
+    </QtMoc>
+    <QtMoc Include="DbMainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ControllerWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CameraImageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ProcessState.h">
+      <Filter>ProcessState</Filter>
+    </QtMoc>
+    <QtMoc Include="NetSpeed.h">
+      <Filter>ProcessState</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="CloudMeeting.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ChatWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="LoginDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ToolbarWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="UserListWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="UserStateWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VideoManager.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VideoWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DbMainWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ControllerWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CameraImageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DbyObject.h">
+      <Filter>sdkwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateEventHandler.h">
+      <Filter>sdkwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="easydump\easydump.h">
+      <Filter>easydump</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\duobei.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\style.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\duobei.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

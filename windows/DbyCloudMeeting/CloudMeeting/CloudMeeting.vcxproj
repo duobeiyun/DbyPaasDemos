@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>QtVS_v301</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)sdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)sdk\lib;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;multimedia;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PreprocessorDefinitions>CURL_STATICLIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PreprocessorDefinitions>CURL_STATICLIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)dbysdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DbyPcNativeSDK.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(SolutionDir)\dbysdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraImageWidget.cpp" />
+    <ClCompile Include="ChatWidget.cpp" />
+    <ClCompile Include="ControllerWidget.cpp" />
+    <ClCompile Include="DbMainWindow.cpp" />
+    <ClCompile Include="DbSettings.cpp" />
+    <ClCompile Include="DbyObject.cpp" />
+    <ClCompile Include="easydump\easydump.cpp" />
+    <ClCompile Include="NetSpeed.cpp" />
+    <ClCompile Include="ProcessState.cpp" />
+    <ClCompile Include="GLYuvWidget.cpp" />
+    <ClCompile Include="LoginDialog.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NoFocusDelegate.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="PrivateEventHandler.cpp" />
+    <ClCompile Include="QNChatMessage\QNChatMessage.cpp" />
+    <ClCompile Include="ToolbarWidget.cpp" />
+    <ClCompile Include="UserListWidget.cpp" />
+    <ClCompile Include="UserStateWidget.cpp" />
+    <ClCompile Include="VideoManager.cpp" />
+    <ClCompile Include="VideoWidget.cpp" />
+    <ClCompile Include="YUV420P_Render.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="CameraImageWidget.ui" />
+    <QtUic Include="ChatWidget.ui" />
+    <QtUic Include="ControllerWidget.ui" />
+    <QtUic Include="DbMainWindow.ui" />
+    <QtUic Include="LoginDialog.ui" />
+    <QtUic Include="ToolbarWidget.ui" />
+    <QtUic Include="UserListWidget.ui" />
+    <QtUic Include="UserStateWidget.ui" />
+    <QtUic Include="VideoManager.ui" />
+    <QtUic Include="VideoWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="CloudMeeting.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DbSettings.h" />
+    <QtMoc Include="DbMainWindow.h" />
+    <QtMoc Include="ControllerWidget.h" />
+    <QtMoc Include="CameraImageWidget.h" />
+    <ClInclude Include="DbyObject.h" />
+    <ClInclude Include="easydump\easydump.h" />
+    <QtMoc Include="GLYuvWidget.h" />
+    <QtMoc Include="ProcessState.h" />
+    <QtMoc Include="NetSpeed.h" />
+    <ClInclude Include="PrivateEventHandler.h" />
+    <ClInclude Include="QEventDef.h" />
+    <ClInclude Include="YUV420P_Render.h" />
+    <QtMoc Include="QNChatMessage\QNChatMessage.h" />
+    <QtMoc Include="VideoWidget.h" />
+    <QtMoc Include="VideoManager.h" />
+    <QtMoc Include="UserStateWidget.h" />
+    <QtMoc Include="UserListWidget.h" />
+    <QtMoc Include="ToolbarWidget.h" />
+    <QtMoc Include="ObjectManager.h" />
+    <QtMoc Include="NoFocusDelegate.h" />
+    <QtMoc Include="LoginDialog.h" />
+    <QtMoc Include="ChatWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\duobei.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\style.qss" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\duobei.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

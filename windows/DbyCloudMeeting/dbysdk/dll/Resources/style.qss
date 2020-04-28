@@ -1,0 +1,201 @@
+LoginDialog{
+    background-color:white;
+}
+
+QPushButton#miniBt{
+	background:rgb(238, 79, 75);
+	border-radius:6px;
+}
+
+QPushButton#maxBt{
+	background:rgb(248, 189, 50);
+	border-radius:6px;
+}
+
+QPushButton#closeBt{
+	background:rgb(149, 149, 149);
+	border-radius:6px;
+}
+
+QLabel#dengruLabel {
+    font-family: "PingFangSC-Semibold";
+    font-size: 30px;
+    color: rgb(24, 24, 24);
+}
+
+QLabel#inputErrorTipLabel {
+    font-family: "PingFangSC-Regular";
+    font-size: 12px;
+    color: rgb(241, 72, 72);
+}
+
+QLineEdit#channelIdLEdit{
+    background-color:rgb(244,244,244);
+	border-radius:4px;
+	font-family:"PingFangSC-Semibold";
+}
+
+QLineEdit#userIdLEdit{
+    background-color:rgb(244,244,244);
+	border-radius:4px;
+	font-family:"PingFangSC-Semibold";
+}
+
+QPushButton#joinChannelBt{
+	background:rgb(0, 164, 254);
+	border-radius:18px;
+}
+
+QPushButton#joinPlaybackBt{
+	background:rgb(0, 164, 254);
+	border-radius:18px;
+}
+
+QLabel#versionLabel {
+    font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(102, 102, 102);
+}
+
+QLabel#vuidlabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#sizeLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#mainsizeLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+
+
+QLabel#audioLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#volumeLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#cameraImageLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#mainUidLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#memLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#cpuLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#delayLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#durationLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#netspeedLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit#chatmsglineEdit {
+	color: rgb(0, 0, 0);
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	border-top-left-radius:15px;
+	border-bottom-left-radius:15px;
+}
+
+QPushButton#sendButton {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+	color: rgb(255, 255, 255);
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+}
+
+QLabel#chatBoxLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QLabel#userListLabel {
+	font-family: "PingFangSC-Regular";
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton#videoListCtrlBt{
+	border-radius:12px;
+}
+
+QPushButton#selectCameraBt{
+	border-radius:12px;
+}
+
+QPushButton#selectMicroBt{
+	border-radius:12px;
+}
+
+QPushButton#chatCtrlBt{
+	border-radius:12px;
+}
+
+QPushButton#userListCtrlBt{
+	border-radius:12px;
+}
+
+QPushButton#quitChannelCtrlBt{
+	border-radius:12px;
+}
+
+QMenu
+{
+	color:rgb(255,255,255);
+	background-color:#0f2033;
+	border:none;
+}
+
+QMenu::item:selected
+{
+    color:rgb(255,255,255);
+    background-color:gray;
+}
+
+QPushButton#pushButton_role {
+	font-family: "PingFangSC-Regular";
+    font-size: 12px;
+}

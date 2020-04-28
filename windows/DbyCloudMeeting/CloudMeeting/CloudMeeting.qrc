@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/CloudMeeting">
+        <file>Resources/style.qss</file>
+        <file>Resources/icon-camera-close-138-153.f7fb0f93.png</file>
+        <file>Resources/icon-camera-closed-active-72-72.d364d16e.png</file>
+        <file>Resources/icon-camera-closed-normal-72-72.f65f0cc1.png</file>
+        <file>Resources/icon-camera-open-active-72-72.3aa07e97.png</file>
+        <file>Resources/icon-camera-open-normal-72-72.b50a8f7d.png</file>
+        <file>Resources/icon-choose-white-24-18.76a94207.png</file>
+        <file>Resources/icon-hang-up-72-72.7c53bc2c.png</file>
+        <file>Resources/icon-max-video-60-60.1b2a2f27.png</file>
+        <file>Resources/icon-message-active-72-72.99f01a90.png</file>
+        <file>Resources/icon-message-normal-72-72.c38afe81.png</file>
+        <file>Resources/icon-mic-closed-active-72-72.85db8f31.png</file>
+        <file>Resources/icon-mic-closed-normal-72-72.b7fe5142.png</file>
+        <file>Resources/icon-mic-open-active-72-72.3a830cd5.png</file>
+        <file>Resources/icon-mic-open-normal-72-72.32f13f3d.png</file>
+        <file>Resources/icon-radio-input-checked-42-42.7c9c68ea.png</file>
+        <file>Resources/icon-radio-input-unchecked-42-42.7531f17b.png</file>
+        <file>Resources/icon-side-bar-active-72-72.ca9c69a2.png</file>
+        <file>Resources/icon-side-bar-normal-72-72.64285e78.png</file>
+        <file>Resources/icon-tip-error-60-60.5922db34.png</file>
+        <file>Resources/icon-users-active-72-72.215b0024.png</file>
+        <file>Resources/icon-users-normal-72-72.88b0cfeb.png</file>
+        <file>Resources/icon-user-white-30-30.e6e9b67d.png</file>
+        <file>Resources/duobei.aps</file>
+        <file>Resources/duobei.ico</file>
+        <file>Resources/duobei.rc</file>
+        <file>Resources/invalidName@2x.png</file>
+        <file>Resources/loading.gif</file>
+        <file>Resources/loading2.gif</file>
+    </qresource>
+</RCC>
