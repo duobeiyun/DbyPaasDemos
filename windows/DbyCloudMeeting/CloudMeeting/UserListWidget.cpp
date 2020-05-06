@@ -49,7 +49,7 @@ void UserListWidget::OnVideoButtonClicked()
 	QModelIndex idx = ui.tableWidget->indexAt(QPoint(senderObj->frameGeometry().x(), senderObj->frameGeometry().y()));
 	QTableWidgetItem *pItem = ui.tableWidget->item(idx.row(), 2);
 	std::string uid = pItem->text().toStdString();
-	int ret = DbyObject::GetDbyObject()->GetDbyRtcEngine()->muteRemoteVideoStream(uid.c_str(), isMute);
+	int ret = DbyObject::GetDbyObject()->GetDbyRtcEngine()->muteRemoteVideoStream(uid.c_str(), "", isMute);
 
 	setVideoBtStyle(senderObj, isMute);
 
@@ -68,7 +68,7 @@ void UserListWidget::OnAudioButtonClicked()
 	QModelIndex idx = ui.tableWidget->indexAt(QPoint(senderObj->frameGeometry().x(), senderObj->frameGeometry().y()));
 	QTableWidgetItem *pItem = ui.tableWidget->item(idx.row(), 2);
 	std::string uid = pItem->text().toStdString();
-	DbyObject::GetDbyObject()->GetDbyRtcEngine()->muteRemoteAudioStream(uid.c_str(), isMute);
+	DbyObject::GetDbyObject()->GetDbyRtcEngine()->muteRemoteAudioStream(uid.c_str(),"", isMute);
 
 	setAudioBtStyle(senderObj, isMute);
 

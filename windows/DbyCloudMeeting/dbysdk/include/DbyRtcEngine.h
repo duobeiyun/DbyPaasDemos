@@ -85,8 +85,8 @@ public:
 
 	virtual void enableAudioVolumeIndication(int interval, bool report_local) = 0;
 
-	virtual int muteRemoteVideoStream(const char* uid, bool mute) = 0;
-	virtual int muteRemoteAudioStream(const char* uid, bool mute) = 0;
+	virtual int muteRemoteVideoStream(const char* uid, const char* devicename, bool mute) = 0;
+	virtual int muteRemoteAudioStream(const char* uid, const char* devicename, bool mute) = 0;
 
 	virtual void setDualStreamMode(bool status) = 0;
 	virtual bool setDualStream(const char* uid, int mode) = 0;
@@ -107,6 +107,7 @@ public:
 	virtual void setAppPack(const char* name) = 0;
 	virtual void setAppVersion(const char* ver) = 0;
 	virtual void setEnvironment(int env) = 0;
+	virtual void enableP2P(bool s) = 0;
 };
 
 class DbyRtcEngineEventHandler
@@ -133,8 +134,9 @@ public:
 		(void)h;
 	}
 
-	virtual void onRemoteVideoData(const char* id, char* data, uint32_t size, int32_t width, int32_t height) {
+	virtual void onRemoteVideoData(const char* id, const char* devicename, char* data, uint32_t size, int32_t width, int32_t height) {
 		(void)id;
+		(void)devicename;
 		(void)data;
 		(void)size;
 		(void)width;

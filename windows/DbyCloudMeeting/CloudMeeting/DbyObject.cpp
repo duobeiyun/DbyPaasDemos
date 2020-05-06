@@ -99,13 +99,13 @@ void DbyObject::LeaveChannel()
 int DbyObject::MuteRemoteVideoStream(const char* uid, bool mute)
 {
 	INT_FAILED_RETURN(m_pDbyRtcEngine)
-	return m_pDbyRtcEngine->muteRemoteVideoStream(uid, mute);
+	return m_pDbyRtcEngine->muteRemoteVideoStream(uid,"", mute);
 }
 
 int DbyObject::MuteRemoteAudioStream(const char* uid, bool mute)
 {
 	INT_FAILED_RETURN(m_pDbyRtcEngine)
-	return m_pDbyRtcEngine->muteRemoteAudioStream(uid, mute);
+	return m_pDbyRtcEngine->muteRemoteAudioStream(uid,"", mute);
 }
 
 void DbyObject::SetDualStreamMode(bool status)

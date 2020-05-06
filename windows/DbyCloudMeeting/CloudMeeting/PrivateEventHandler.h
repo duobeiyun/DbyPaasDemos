@@ -13,7 +13,7 @@ public:
 	virtual void onLeaveChannel(int code) override;
 
 	virtual void onLocalVideoData(uint8_t *y, int w, int h) override;
-	virtual void onRemoteVideoData(const char* id, char* data, uint32_t size, int32_t width, int32_t height) override;
+	virtual void onRemoteVideoData(const char* id, const char* devicename, char* data, uint32_t size, int32_t width, int32_t height) override;
 
 	virtual void onLocalAudioStateChanged(int errortype, int errorcode) override;
 	virtual void onLocalVideoStateChanged(int errortype, int errorcode) override;

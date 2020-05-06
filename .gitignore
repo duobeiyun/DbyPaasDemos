@@ -10,3 +10,4 @@ build
 
 xcschememanagement.plist
 windows/DbyCloudMeeting/CloudMeeting/Win32/
+windows/DbyCloudMeeting/dbysdk/dll/log/

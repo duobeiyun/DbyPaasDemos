@@ -41,7 +41,7 @@ void PrivateEventHandler::onLocalVideoData(uint8_t *y, int w, int h)
 	int res = QMetaObject::invokeMethod(pMngrObj, "SigProcessLocalYuv",Qt::QueuedConnection, Q_ARG(const QByteArray&, arr), Q_ARG(uint, w), Q_ARG(uint, h));
 }
 
-void PrivateEventHandler::onRemoteVideoData(const char* id, char* data, uint32_t size, int32_t width, int32_t height)
+void PrivateEventHandler::onRemoteVideoData(const char* id, const char* devicename, char* data, uint32_t size, int32_t width, int32_t height)
 {
 	std::thread::id tid = std::this_thread::get_id();
 	ObjectManager* pMngrObj = ObjectManager::GetObjectManager();
