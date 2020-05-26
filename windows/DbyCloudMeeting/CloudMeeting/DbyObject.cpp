@@ -29,14 +29,10 @@ DbyRtcEngine* DbyObject::GetDbyRtcEngine()
 	{
 		m_pDbyRtcEngine = createDbyRtcEngine();
 
-		QString strenv = "PRD";
-		DbSettings::Read(ENVIRONMENT, strenv, LOGIN);
-		int env = strenv == "PRD" ? 0 : 1;
-		m_pDbyRtcEngine->setEnvironment(env);
-
+		
 		DbyRtcEngineContext ctx;
-		ctx.appId = env == 0 ? "2f73114f06f4483da779cb1968424625" : "qwertyuio";
-		ctx.appkey = env == 0 ? "47f90cb3bb2345ed9d010be3c299eca4" : "asdfghjkl";
+		ctx.appId = APPID;
+		ctx.appkey = APPKEY;
 		ctx.eventHandler = &m_Handler;
 		m_pDbyRtcEngine->initialize(ctx);
 	}

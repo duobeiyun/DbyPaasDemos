@@ -9,7 +9,8 @@
 #define UID "userid"
 #define LOGIN "login"
 #define ENVIRONMENT "environment"
-
+#define APPID ""
+#define APPKEY ""
 enum REMOTEUSER_STATE_TYPE
 {
 	USER_VALID_STATE = -1,
