@@ -219,7 +219,7 @@ extension DbyVideoChatViewController: DbyEngineDelegate {
     ///先收到 remoteVideoStateChangedOfUid enabled = true
     ///之后会收到 firstRemoteVideoDecodedOfUid
 
-    func dbyEngine(_ engine: DbyEngine, firstRemoteVideoDecodedOfUid uid: String, device deviceId: String?, size: CGSize) {
+    func dbyEngine(_ engine: DbyEngine, firstRemoteVideoDecodedOfUid uid: String, identifier: String?, size: CGSize) {
         self.videoManager.receiveRemoteFirstVideoFrameOf(uid: uid)
     }
     //远端用户音频流开关状态
@@ -228,7 +228,7 @@ extension DbyVideoChatViewController: DbyEngineDelegate {
     }
 
     //远端用户视频流开关状态
-    func dbyEngine(_ engine: DbyEngine, remoteVideoStateChangedOfUid uid: String, device: String?, state enabled: Bool) {
+    func dbyEngine(_ engine: DbyEngine, remoteVideoStateChangedOfUid uid: String, identifier: String?, state enabled: Bool) {
 
         print("\(#function), uid = \(uid), enable = \(enabled)")
         self.videoManager.remoteVideoChangeWith(uid: uid, enabled: enabled)
@@ -412,6 +412,12 @@ extension DbyVideoChatViewController {
         MBProgressHUD.startLoading(withMessage: "测速中...", in: self.view)
         switch joinChannelInfo.line {
         case .DBY:
+            
+            if joinChannelInfo.channelProfile == .communaction {
+                dbyEngine.setChannelProfile(.communication)
+            } else {
+                dbyEngine.setChannelProfile(.liveBroadcasting)
+            }
             dbyEngine.enableLastmileTest()
             break
         default:

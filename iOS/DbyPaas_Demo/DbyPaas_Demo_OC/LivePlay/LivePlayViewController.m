@@ -194,11 +194,11 @@
     [self.livePlayHelper audioChangeOfUid:uid enabled:enabled];
 }
 
-- (void)dbyEngine:(DbyEngine *)engine remoteVideoStateChangedOfUid:(NSString *)uid device:(NSString *)device state:(BOOL)enabled
+- (void)dbyEngine:(DbyEngine *)engine remoteVideoStateChangedOfUid:(NSString *)uid identifier:(NSString *)identifier state:(BOOL)enabled
 {
     [self.livePlayHelper videoChangeOfUid:uid enabled:enabled];
 }
-- (void)dbyEngine:(DbyEngine *)engine firstRemoteVideoDecodedOfUid:(NSString *)uid device:(NSString *)deviceId size:(CGSize)size
+- (void)dbyEngine:(DbyEngine *)engine firstRemoteVideoDecodedOfUid:(NSString *)uid identifier:(NSString *)identifier size:(CGSize)size
 {
     
 }
