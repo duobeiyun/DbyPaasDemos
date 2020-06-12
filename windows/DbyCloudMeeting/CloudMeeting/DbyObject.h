@@ -15,7 +15,7 @@ public:
 	int SetChannelProfile(int profile);
 	int SetClientRole(int role);
 
-	int JoinChannel(std::string channelId, std::string uid, std::string nickname);
+	void JoinChannel(std::string channelId, std::string uid, std::string nickname);
 	void LeaveChannel();
 
 	int MuteRemoteVideoStream(const char* uid, bool mute);

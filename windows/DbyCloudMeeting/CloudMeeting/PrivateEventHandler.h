@@ -8,6 +8,7 @@ public:
 	PrivateEventHandler();
 	virtual ~PrivateEventHandler();
 
+	virtual void onJoinChannelResult(int errorcode) override;
 	virtual void onJoinChannelSuccess(const char* channel, const char* uid) override;
 	virtual void onRejoinChannelSuccess() override;
 	virtual void onLeaveChannel(int code) override;

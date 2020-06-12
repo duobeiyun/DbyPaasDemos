@@ -13,6 +13,7 @@
 #endif
 
 class DbyRtcEngineEventHandler;
+class DBVideoSource;
 
 struct DbyRtcEngineContext
 {
@@ -26,6 +27,14 @@ struct DbyRtcEngineContext
 		, appkey(NULL)
 		, context(NULL)
 	{}
+};
+
+enum VIDEO_SHOW_MODE
+{
+	// SDK渲染视频，传递窗口句柄
+	SDK_SHOW,
+	//用户渲染视频，从回调拿到yuv数据自己渲染
+	CLIENT_SHOW
 };
 
 enum RENDER_MODE_TYPE
@@ -72,19 +81,24 @@ public:
 
 	virtual int setUserRole(int role) = 0;
 
-	virtual int joinChannel(const char* channelId, const char* uid, const char* nickname) = 0;
+	virtual void joinChannel(const char* channelId, const char* uid, const char* nickname) = 0;
 	virtual void leaveChannel() = 0;
 
 	virtual int enableVideo() = 0;
 	virtual int enableLocalVideo(bool enabled) = 0;
 	virtual int enableLocalAudio(bool enabled) = 0;
 
-	virtual void setVideoLoadType(int type) = 0; //0-hwnd; 1-self render
+	//自定义视频采集源
+	virtual int setDBVideoSource(DBVideoSource* source) = 0;
+	virtual int enableLocalVideo(bool enabled, const char* deviceid) = 0;
+	virtual void sendVideoWithDeviceid(void* handle, void* data, unsigned int width, unsigned int height, unsigned int sourceW, unsigned int sourceH) = 0;
+
+	//setVideoLoadType  setupLocalVideo  setupRemoteVideo 暂不支持
+	virtual void setVideoLoadType(VIDEO_SHOW_MODE type) = 0; //0-hwnd; 1-self render
 	virtual int setupLocalVideo(const VideoCanvas& canvas) = 0;
 	virtual int setupRemoteVideo(const VideoCanvas& canvas) = 0;
 
 	virtual void enableAudioVolumeIndication(int interval, bool report_local) = 0;
-
 	virtual int muteRemoteVideoStream(const char* uid, const char* devicename, bool mute) = 0;
 	virtual int muteRemoteAudioStream(const char* uid, const char* devicename, bool mute) = 0;
 
@@ -114,6 +128,10 @@ class DbyRtcEngineEventHandler
 {
 public:
 	virtual ~DbyRtcEngineEventHandler() {}
+
+	virtual void onJoinChannelResult(int errorcode) {
+		(void)errorcode;
+	}
 
 	virtual void onJoinChannelSuccess(const char* channel, const char* uid) {
 		(void)channel;
@@ -201,6 +219,30 @@ public:
 	virtual void onClientRoleChanged(int oldRole, int newRole) {
 		(void)oldRole;
 		(void)newRole;
+	}
+
+	virtual void onFirstRemoteVideoDecoded(const char* uid, const char* deviceid, int w, int h){
+		(void)uid;
+		(void)deviceid;
+		(void)w;
+		(void)h;
+	}
+};
+
+//自定义视频采集回调
+class DBVideoSource{
+public:
+
+	virtual void onVideoSourceInit(const char* deviceid, void* handle)
+	{
+		(void)deviceid;
+		(void)handle;
+	}
+
+	virtual void onVideoSouceDestroy(const char* deviceid, void* handle)
+	{
+		(void)deviceid;
+		(void)handle;
 	}
 };
 

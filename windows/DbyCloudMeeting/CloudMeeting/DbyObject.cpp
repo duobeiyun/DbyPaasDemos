@@ -80,10 +80,10 @@ int DbyObject::SetClientRole(int role)
 	return m_pDbyRtcEngine->setUserRole(role);
 }
 
-int DbyObject::JoinChannel(std::string channelId, std::string uid, std::string nickname)
+void DbyObject::JoinChannel(std::string channelId, std::string uid, std::string nickname)
 {
-	INT_FAILED_RETURN(m_pDbyRtcEngine)
-	return m_pDbyRtcEngine->joinChannel(channelId.c_str(), uid.c_str(), nickname.c_str());
+	VOID_FAILED_RETURN(m_pDbyRtcEngine)
+	m_pDbyRtcEngine->joinChannel(channelId.c_str(), uid.c_str(), nickname.c_str());
 }
 
 void DbyObject::LeaveChannel()
@@ -101,7 +101,7 @@ int DbyObject::MuteRemoteVideoStream(const char* uid, bool mute)
 int DbyObject::MuteRemoteAudioStream(const char* uid, bool mute)
 {
 	INT_FAILED_RETURN(m_pDbyRtcEngine)
-	return m_pDbyRtcEngine->muteRemoteAudioStream(uid,"", mute);
+	return m_pDbyRtcEngine->muteRemoteAudioStream(uid, "", mute);
 }
 
 void DbyObject::SetDualStreamMode(bool status)

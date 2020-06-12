@@ -11,6 +11,15 @@ PrivateEventHandler::~PrivateEventHandler()
 {
 }
 
+void PrivateEventHandler::onJoinChannelResult(int errorcode)
+{
+	if (errorcode != 0)
+	{
+		QString str = QString::fromLocal8Bit("º”»Î∆µµ¿ ß∞‹£¨¥ÌŒÛ¬Î£∫%1").arg(errorcode);
+		int res = QMetaObject::invokeMethod(ObjectManager::GetObjectManager(), "SigUpdateStatusInformation", Q_ARG(int, errorcode), Q_ARG(QString, str));
+	}
+}
+
 void PrivateEventHandler::onJoinChannelSuccess(const char* channel, const char* uid)
 {
 	qDebug() << "onJoinChannelSuccess";

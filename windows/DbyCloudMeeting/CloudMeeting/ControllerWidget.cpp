@@ -2,6 +2,7 @@
 #include <QDebug>
 #include "ObjectManager.h"
 #include "DbyObject.h"
+#include "DbSettings.h"
 
 ControllerWidget::ControllerWidget(QWidget *parent)
 	: QWidget(parent)
@@ -35,7 +36,9 @@ void ControllerWidget::OnJoinChannel(QString channelId, QString userId, QString 
 	objMngr->SetLocalUid(userId);
 	objMngr->SetVideoObj(ui.videoManager);
 	pDbyObj->SetAppPack(QString::fromLocal8Bit("多贝云会议（PC）").toStdString().c_str());
-	pDbyObj->SetAppVersion(VERSION_NUM);
+	QString strVer("1.0.0");
+	DbSettings::Read(VERSION, strVer, LOGIN);
+	pDbyObj->SetAppVersion(strVer.toStdString().c_str());
 	pDbyObj->SetDualStreamMode(isDualStream);
 
 	if (!(profile && !role)) {
@@ -53,12 +56,9 @@ void ControllerWidget::OnJoinChannel(QString channelId, QString userId, QString 
 	pDbyObj->SetChannelProfile(profile ? 1 : 0);
 	pDbyObj->SetClientRole(role ? 1 : 2);
 
-	int ret = pDbyObj->JoinChannel(channelId.toStdString(), userId.toStdString(), nickname.toStdString());
+	pDbyObj->JoinChannel(channelId.toStdString(), userId.toStdString(), nickname.toStdString());
 
-	if (ret != 0) {
-		QMetaObject::invokeMethod(ObjectManager::GetObjectManager(), "SigUpdateStatusInformation", Q_ARG(int, ret), Q_ARG(QString, QString::fromLocal8Bit("加入频道失败！")));
-		qDebug() << QString("JoinChannel failed!!! ret = %1").arg(ret);
-	}
+	
 
 	UserListWidget *userListWidget = (UserListWidget *)ui.stackedWidget->widget(0);
 	userListWidget->AddLocalUid(userId);
