@@ -189,7 +189,7 @@ public class DuobeiLiveStrategy implements Livestrategy {
     private void joinChannel() {
         String channelId = SharePreUtils.getInstance(mContext).getValue(Constant.CHANNELID, "123");
         userId = SharePreUtils.getInstance(mContext).getValue(Constant.USERID, "0");
-        mDbyEngine.joinChannel(channelId, userId,"");
+        mDbyEngine.joinChannel(channelId, userId,userId);
         mDbyEngine.enableAudioVolumeIndication(-1, true);
     }
 }
