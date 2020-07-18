@@ -18,7 +18,7 @@
     "dby-paas-electron-sdk": "^1.1.15",
     "electron": "2",
     "electron-builder": "^22.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "md5": "^2.2.1",
     "mobx": "^5.15.0",
     "mobx-react": "^6.1.4",
