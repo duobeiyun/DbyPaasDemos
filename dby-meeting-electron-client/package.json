@@ -49,7 +49,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "superagent": "^5.1.0",
-    "systeminformation": "^4.15.3",
+    "systeminformation": "^4.27.11",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
