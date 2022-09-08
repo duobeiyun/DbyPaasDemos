@@ -37,7 +37,7 @@
     "electron-log": "^3.0.8",
     "execa": "^2.0.3",
     "html-webpack-plugin": "^4.0.0-beta.3",
-    "jszip": "^3.2.2",
+    "jszip": "^3.7.0",
     "lodash": "^4.17.11",
     "md5": "^2.2.1",
     "mobx": "^5.9.4",
